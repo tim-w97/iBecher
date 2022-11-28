@@ -11,6 +11,9 @@
 		577D281D29341F840076A691 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D281C29341F840076A691 /* ContentView.swift */; };
 		577D281F29341F850076A691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577D281E29341F850076A691 /* Assets.xcassets */; };
 		577D282229341F850076A691 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577D282129341F850076A691 /* Preview Assets.xcassets */; };
+		577D282A293429E90076A691 /* MugCheckerARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D2829293429E90076A691 /* MugCheckerARView.swift */; };
+		577D282C29342A1C0076A691 /* CoffeeTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D282B29342A1C0076A691 /* CoffeeTrackerView.swift */; };
+		577D282E29342AA30076A691 /* CoffeeConsumptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D282D29342AA30076A691 /* CoffeeConsumptionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		577D281C29341F840076A691 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		577D281E29341F850076A691 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		577D282129341F850076A691 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		577D2829293429E90076A691 /* MugCheckerARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MugCheckerARView.swift; sourceTree = "<group>"; };
+		577D282B29342A1C0076A691 /* CoffeeTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTrackerView.swift; sourceTree = "<group>"; };
+		577D282D29342AA30076A691 /* CoffeeConsumptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeConsumptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,7 @@
 		577D281929341F840076A691 /* iBecher */ = {
 			isa = PBXGroup;
 			children = (
+				577D2828293429C70076A691 /* Screens */,
 				577D281A29341F840076A691 /* iBecherApp.swift */,
 				577D281C29341F840076A691 /* ContentView.swift */,
 				577D281E29341F850076A691 /* Assets.xcassets */,
@@ -65,6 +72,16 @@
 				577D282129341F850076A691 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		577D2828293429C70076A691 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				577D2829293429E90076A691 /* MugCheckerARView.swift */,
+				577D282B29342A1C0076A691 /* CoffeeTrackerView.swift */,
+				577D282D29342AA30076A691 /* CoffeeConsumptionView.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +155,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				577D281D29341F840076A691 /* ContentView.swift in Sources */,
+				577D282C29342A1C0076A691 /* CoffeeTrackerView.swift in Sources */,
+				577D282A293429E90076A691 /* MugCheckerARView.swift in Sources */,
 				577D281B29341F840076A691 /* iBecherApp.swift in Sources */,
+				577D282E29342AA30076A691 /* CoffeeConsumptionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
