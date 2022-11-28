@@ -14,6 +14,8 @@
 		57350C8029352C550065C9C3 /* CoffeeSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350C7F29352C550065C9C3 /* CoffeeSize.swift */; };
 		57350C8229352CE20065C9C3 /* MugType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350C8129352CE20065C9C3 /* MugType.swift */; };
 		57350CA129352E800065C9C3 /* MugCheckerARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350CA029352E800065C9C3 /* MugCheckerARViewContainer.swift */; };
+		57350CA329353EA90065C9C3 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350CA229353EA90065C9C3 /* Database.swift */; };
+		57350CA6293544350065C9C3 /* CoffeeConsumptionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350CA5293544350065C9C3 /* CoffeeConsumptionVM.swift */; };
 		577D281B29341F840076A691 /* iBecherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D281A29341F840076A691 /* iBecherApp.swift */; };
 		577D281D29341F840076A691 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D281C29341F840076A691 /* ContentView.swift */; };
 		577D281F29341F850076A691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577D281E29341F850076A691 /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 		57350C7F29352C550065C9C3 /* CoffeeSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeSize.swift; sourceTree = "<group>"; };
 		57350C8129352CE20065C9C3 /* MugType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MugType.swift; sourceTree = "<group>"; };
 		57350CA029352E800065C9C3 /* MugCheckerARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MugCheckerARViewContainer.swift; sourceTree = "<group>"; };
+		57350CA229353EA90065C9C3 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		57350CA5293544350065C9C3 /* CoffeeConsumptionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeConsumptionVM.swift; sourceTree = "<group>"; };
 		577D281729341F840076A691 /* iBecher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBecher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		577D281A29341F840076A691 /* iBecherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBecherApp.swift; sourceTree = "<group>"; };
 		577D281C29341F840076A691 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,9 +67,8 @@
 		57350C742935293B0065C9C3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				57350C7F29352C550065C9C3 /* CoffeeSize.swift */,
-				57350C8129352CE20065C9C3 /* MugType.swift */,
-				57350C7D29352C120065C9C3 /* CoffeePurchase.swift */,
+				57350CA429353FC40065C9C3 /* Types */,
+				57350CA229353EA90065C9C3 /* Database.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -75,6 +78,7 @@
 			children = (
 				57350C7929352A420065C9C3 /* CoffeeTrackerVM.swift */,
 				57350C7B29352A900065C9C3 /* MugCheckerVM.swift */,
+				57350CA5293544350065C9C3 /* CoffeeConsumptionVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -85,6 +89,16 @@
 				57350C77293529E20065C9C3 /* ModelInterface.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		57350CA429353FC40065C9C3 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				57350C7F29352C550065C9C3 /* CoffeeSize.swift */,
+				57350C8129352CE20065C9C3 /* MugType.swift */,
+				57350C7D29352C120065C9C3 /* CoffeePurchase.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 		577D280E29341F840076A691 = {
@@ -211,6 +225,7 @@
 				57350CA129352E800065C9C3 /* MugCheckerARViewContainer.swift in Sources */,
 				577D281D29341F840076A691 /* ContentView.swift in Sources */,
 				577D282C29342A1C0076A691 /* CoffeeTrackerView.swift in Sources */,
+				57350CA6293544350065C9C3 /* CoffeeConsumptionVM.swift in Sources */,
 				577D282A293429E90076A691 /* MugCheckerARView.swift in Sources */,
 				577D281B29341F840076A691 /* iBecherApp.swift in Sources */,
 				57350C7E29352C120065C9C3 /* CoffeePurchase.swift in Sources */,
@@ -218,6 +233,7 @@
 				57350C7A29352A420065C9C3 /* CoffeeTrackerVM.swift in Sources */,
 				57350C8229352CE20065C9C3 /* MugType.swift in Sources */,
 				57350C7C29352A900065C9C3 /* MugCheckerVM.swift in Sources */,
+				57350CA329353EA90065C9C3 /* Database.swift in Sources */,
 				57350C78293529E20065C9C3 /* ModelInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

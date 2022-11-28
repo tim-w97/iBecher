@@ -8,5 +8,9 @@
 import Foundation
 
 class CoffeeTrackerVM: ObservableObject {
+    private let modelInterface: ModelInterface
     
+    init() {
+        modelInterface = ModelInterface()
+    }
 }
