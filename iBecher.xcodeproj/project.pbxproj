@@ -16,6 +16,7 @@
 		57350CA129352E800065C9C3 /* MugCheckerARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350CA029352E800065C9C3 /* MugCheckerARViewContainer.swift */; };
 		57350CA329353EA90065C9C3 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350CA229353EA90065C9C3 /* Database.swift */; };
 		57350CA6293544350065C9C3 /* CoffeeConsumptionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350CA5293544350065C9C3 /* CoffeeConsumptionVM.swift */; };
+		57350CA8293557760065C9C3 /* CoffeePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350CA7293557760065C9C3 /* CoffeePrice.swift */; };
 		577D281B29341F840076A691 /* iBecherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D281A29341F840076A691 /* iBecherApp.swift */; };
 		577D281D29341F840076A691 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D281C29341F840076A691 /* ContentView.swift */; };
 		577D281F29341F850076A691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577D281E29341F850076A691 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		57350CA029352E800065C9C3 /* MugCheckerARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MugCheckerARViewContainer.swift; sourceTree = "<group>"; };
 		57350CA229353EA90065C9C3 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		57350CA5293544350065C9C3 /* CoffeeConsumptionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeConsumptionVM.swift; sourceTree = "<group>"; };
+		57350CA7293557760065C9C3 /* CoffeePrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeePrice.swift; sourceTree = "<group>"; };
 		577D281729341F840076A691 /* iBecher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBecher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		577D281A29341F840076A691 /* iBecherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBecherApp.swift; sourceTree = "<group>"; };
 		577D281C29341F840076A691 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			children = (
 				57350CA429353FC40065C9C3 /* Types */,
 				57350CA229353EA90065C9C3 /* Database.swift */,
+				57350CA7293557760065C9C3 /* CoffeePrice.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			files = (
 				57350C8029352C550065C9C3 /* CoffeeSize.swift in Sources */,
 				57350CA129352E800065C9C3 /* MugCheckerARViewContainer.swift in Sources */,
+				57350CA8293557760065C9C3 /* CoffeePrice.swift in Sources */,
 				577D281D29341F840076A691 /* ContentView.swift in Sources */,
 				577D282C29342A1C0076A691 /* CoffeeTrackerView.swift in Sources */,
 				57350CA6293544350065C9C3 /* CoffeeConsumptionVM.swift in Sources */,
