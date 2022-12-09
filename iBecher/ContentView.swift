@@ -15,7 +15,7 @@ struct ContentView: View {
                     Label("Tasse überprüfen", systemImage: "wand.and.stars")
                 }
             
-            CoffeeTrackerView()
+            CoffeeTrackerView(vm: CoffeeTrackerVM())
                 .tabItem {
                     Label("Tracker", systemImage: "clock.fill")
                 }

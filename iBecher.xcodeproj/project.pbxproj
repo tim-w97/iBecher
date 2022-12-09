@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5703DAB929434F8000650BD7 /* MugButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5703DAB829434F8000650BD7 /* MugButton.swift */; };
+		5703DABB294354B200650BD7 /* MugTypeToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5703DABA294354B200650BD7 /* MugTypeToggle.swift */; };
 		57350C78293529E20065C9C3 /* ModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350C77293529E20065C9C3 /* ModelInterface.swift */; };
 		57350C7A29352A420065C9C3 /* CoffeeTrackerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350C7929352A420065C9C3 /* CoffeeTrackerVM.swift */; };
 		57350C7C29352A900065C9C3 /* MugCheckerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350C7B29352A900065C9C3 /* MugCheckerVM.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5703DAB829434F8000650BD7 /* MugButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MugButton.swift; sourceTree = "<group>"; };
+		5703DABA294354B200650BD7 /* MugTypeToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MugTypeToggle.swift; sourceTree = "<group>"; };
 		57350C77293529E20065C9C3 /* ModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelInterface.swift; sourceTree = "<group>"; };
 		57350C7929352A420065C9C3 /* CoffeeTrackerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTrackerVM.swift; sourceTree = "<group>"; };
 		57350C7B29352A900065C9C3 /* MugCheckerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MugCheckerVM.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				57350CA029352E800065C9C3 /* MugCheckerARViewContainer.swift */,
+				5703DAB829434F8000650BD7 /* MugButton.swift */,
+				5703DABA294354B200650BD7 /* MugTypeToggle.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -235,10 +241,12 @@
 				57350C7E29352C120065C9C3 /* CoffeePurchase.swift in Sources */,
 				577D282E29342AA30076A691 /* CoffeeConsumptionView.swift in Sources */,
 				57350C7A29352A420065C9C3 /* CoffeeTrackerVM.swift in Sources */,
+				5703DABB294354B200650BD7 /* MugTypeToggle.swift in Sources */,
 				57350C8229352CE20065C9C3 /* MugType.swift in Sources */,
 				57350C7C29352A900065C9C3 /* MugCheckerVM.swift in Sources */,
 				57350CA329353EA90065C9C3 /* Database.swift in Sources */,
 				57350C78293529E20065C9C3 /* ModelInterface.swift in Sources */,
+				5703DAB929434F8000650BD7 /* MugButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
