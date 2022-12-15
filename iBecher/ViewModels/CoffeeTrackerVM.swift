@@ -13,11 +13,7 @@ class CoffeeTrackerVM: ObservableObject {
     @Published var selectedCoffeeSize: CoffeeSize
     @Published var price: Double
     
-    @Published var mugType: MugType {
-        didSet {
-            calculateCoffeePrice()
-        }
-    }
+    @Published var mugType: MugType
     
     init() {
         modelInterface = ModelInterface()
@@ -42,6 +38,7 @@ class CoffeeTrackerVM: ObservableObject {
     
     func toggleMugType(toggleValue: Bool) {
         mugType = toggleValue ? .reusableMug : .paperMug
+        calculateCoffeePrice()
     }
     
     private func calculateCoffeePrice() {
