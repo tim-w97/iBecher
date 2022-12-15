@@ -9,14 +9,7 @@ import SwiftUI
 
 struct MugCheckerARView: View {
     var body: some View {
-        VStack {
-            Text("Stelle deine Tasse auf eine ebene Fläche und drücke auf Start.")
-                .multilineTextAlignment(.center)
-            
-            Button("Start", action: {})
-                .padding()
-                .buttonStyle(.bordered)
-        }
+        MugCheckerARViewContainer()
     }
 }
 

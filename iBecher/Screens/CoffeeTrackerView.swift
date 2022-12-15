@@ -19,7 +19,7 @@ struct CoffeeTrackerView: View {
             Text("Hast du eine eigene Tasse dabei?")
                 .padding()
             
-            MugTypeToggle(isOn: $vm.mugTypeToggleValue)
+            MugTypeToggle(vm: vm)
             
             Spacer()
             

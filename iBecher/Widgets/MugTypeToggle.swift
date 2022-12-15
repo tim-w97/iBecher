@@ -8,20 +8,24 @@
 import SwiftUI
 
 struct MugTypeToggle: View {
-    @Binding var isOn: Bool
+    @ObservedObject var vm: CoffeeTrackerVM
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 20).stroke(isOn ? .green : .gray, lineWidth: 8)
+            RoundedRectangle(cornerRadius: 20).stroke(vm.mugTypeToggleValue ? .green : .gray, lineWidth: 8)
             
-            Toggle(isOn ? "Ja! 😍" : "Nein. 😔", isOn: $isOn)
+            Toggle(vm.mugTypeToggleValue ? "Ja! 😍" : "Nein. 😔", isOn: $vm.mugTypeToggleValue)
                 .padding()
-        }.frame(width: 170, height: 100)
+        }
+        .frame(width: 170, height: 100)
+        .onTapGesture {
+            vm.mugTypeToggleValue.toggle()
+        }
     }
 }
 
 struct MugTypeSwitch_Previews: PreviewProvider {
     static var previews: some View {
-        MugTypeToggle(isOn: .constant(true))
+        MugTypeToggle(vm: CoffeeTrackerVM())
     }
 }
