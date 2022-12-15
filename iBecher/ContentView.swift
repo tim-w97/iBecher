@@ -12,7 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $tabViewSelection){
-            MugCheckerARView()
+            MugCheckerARView(vm: MugCheckerVM())
                 .tabItem {
                     Label("Tasse überprüfen", systemImage: "wand.and.stars")
                 }.tag(0)

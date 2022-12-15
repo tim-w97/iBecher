@@ -8,7 +8,7 @@
 import Foundation
 
 class MugCheckerVM : ObservableObject {
-    private let modelInterface: ModelInterface
+   private let modelInterface: ModelInterface
     
     init() {
         modelInterface = ModelInterface()
