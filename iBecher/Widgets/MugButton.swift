@@ -9,16 +9,33 @@ import SwiftUI
 
 struct MugButton: View {
     let coffeeSize: CoffeeSize
+    
     @Binding var selectedCoffeeSize: CoffeeSize
+    @Binding var mugType: MugType
+    
     let action: ()->()
+    
+    private func getMugImage() -> String {
+        if mugType == .paperMug {
+            if coffeeSize == .small {
+                return "small paper mug"
+            } else {
+                return "big paper mug"
+            }
+        } else {
+            if coffeeSize == .small {
+                return "small mug"
+            } else {
+                return "big mug"
+            }
+        }
+    }
     
     var body: some View {
         Button(action: action) {
             VStack {
                 ZStack {
-                    Image(systemName: "mug.fill")
-                        .font(coffeeSize == .small ? .title : .system(size: 50))
-                        .foregroundColor(coffeeSize == selectedCoffeeSize ? .blue : .gray)
+                    Image(getMugImage()).resizable()
                     
                     Circle()
                         .stroke(coffeeSize == selectedCoffeeSize ? .blue : .gray, lineWidth: 8)
@@ -35,6 +52,7 @@ struct MugButton_Previews: PreviewProvider {
         MugButton(
             coffeeSize: .small,
             selectedCoffeeSize: .constant(.small),
+            mugType: .constant(.paperMug),
             action: {}
         )
     }

@@ -10,17 +10,20 @@ import SwiftUI
 struct MugTypeToggle: View {
     @ObservedObject var vm: CoffeeTrackerVM
     
+    @State var toggleValue = false
+    
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 20).stroke(vm.mugTypeToggleValue ? .green : .gray, lineWidth: 8)
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(vm.mugType == .reusableMug ? .green : .gray, lineWidth: 8)
             
-            Toggle(vm.mugTypeToggleValue ? "Ja! 😍" : "Nein. 😔", isOn: $vm.mugTypeToggleValue)
+            Toggle(vm.mugType == .reusableMug ? "Ja! 😍" : "Nein. 😔", isOn: $toggleValue)
+                .onChange(of: toggleValue) { newToggleValue in
+                    vm.toggleMugType(toggleValue: newToggleValue)
+                }
                 .padding()
         }
         .frame(width: 170, height: 100)
-        .onTapGesture {
-            vm.mugTypeToggleValue.toggle()
-        }
     }
 }
 

@@ -28,13 +28,17 @@ struct CoffeeTrackerView: View {
             HStack {
                 MugButton(
                     coffeeSize: .small,
-                    selectedCoffeeSize: $vm.selectedCoffeeSize) {
+                    selectedCoffeeSize: $vm.selectedCoffeeSize,
+                    mugType: $vm.mugType
+                ) {
                         vm.selectSmallCoffeeSize()
                     }.padding()
                 
                 MugButton(
                     coffeeSize: .big,
-                    selectedCoffeeSize: $vm.selectedCoffeeSize) {
+                    selectedCoffeeSize: $vm.selectedCoffeeSize,
+                    mugType: $vm.mugType
+                ) {
                         vm.selectBigCoffeeSize()
                     }.padding()
             }
