@@ -26,6 +26,7 @@
 		577D282A293429E90076A691 /* MugCheckerARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D2829293429E90076A691 /* MugCheckerARView.swift */; };
 		577D282C29342A1C0076A691 /* CoffeeTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D282B29342A1C0076A691 /* CoffeeTrackerView.swift */; };
 		577D282E29342AA30076A691 /* CoffeeConsumptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D282D29342AA30076A691 /* CoffeeConsumptionView.swift */; };
+		57BD48BA294BCFC3009252B5 /* plastic mug.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 57BD48B9294BCFC3009252B5 /* plastic mug.rcproject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,8 @@
 		577D2829293429E90076A691 /* MugCheckerARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MugCheckerARView.swift; sourceTree = "<group>"; };
 		577D282B29342A1C0076A691 /* CoffeeTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTrackerView.swift; sourceTree = "<group>"; };
 		577D282D29342AA30076A691 /* CoffeeConsumptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeConsumptionView.swift; sourceTree = "<group>"; };
+		57BD48B9294BCFC3009252B5 /* plastic mug.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = "plastic mug.rcproject"; sourceTree = "<group>"; };
+		57BD48BB294BD2C4009252B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 		577D281929341F840076A691 /* iBecher */ = {
 			isa = PBXGroup;
 			children = (
+				57BD48BB294BD2C4009252B5 /* Info.plist */,
+				57BD48B8294BCE4A009252B5 /* 3DModels */,
 				57350C76293529D40065C9C3 /* Utils */,
 				57350C75293529430065C9C3 /* ViewModels */,
 				57350C742935293B0065C9C3 /* Models */,
@@ -158,6 +163,14 @@
 				577D282D29342AA30076A691 /* CoffeeConsumptionView.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		57BD48B8294BCE4A009252B5 /* 3DModels */ = {
+			isa = PBXGroup;
+			children = (
+				57BD48B9294BCFC3009252B5 /* plastic mug.rcproject */,
+			);
+			path = 3DModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +257,7 @@
 				5703DABB294354B200650BD7 /* MugTypeToggle.swift in Sources */,
 				57350C8229352CE20065C9C3 /* MugType.swift in Sources */,
 				57350C7C29352A900065C9C3 /* MugCheckerVM.swift in Sources */,
+				57BD48BA294BCFC3009252B5 /* plastic mug.rcproject in Sources */,
 				57350CA329353EA90065C9C3 /* Database.swift in Sources */,
 				57350C78293529E20065C9C3 /* ModelInterface.swift in Sources */,
 				5703DAB929434F8000650BD7 /* MugButton.swift in Sources */,
@@ -378,9 +392,13 @@
 				DEVELOPMENT_TEAM = H7X3PKN5TK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iBecher/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Bevor ich dir sagen kann, ob deine Tasse in den Automaten passt, brauche ich Zugriff auf deine Kamera.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -407,9 +425,13 @@
 				DEVELOPMENT_TEAM = H7X3PKN5TK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iBecher/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Bevor ich dir sagen kann, ob deine Tasse in den Automaten passt, brauche ich Zugriff auf deine Kamera.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

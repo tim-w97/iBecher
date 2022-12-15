@@ -15,6 +15,10 @@ struct MugCheckerARViewContainer: UIViewRepresentable {
         
         let arView = ARView(frame: .zero)
         
+        let mugAnchor = try! PlasticMug.loadScene()
+        
+        arView.scene.addAnchor(mugAnchor)
+        
         return arView
     }
     
