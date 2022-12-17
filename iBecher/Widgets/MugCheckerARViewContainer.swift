@@ -10,19 +10,13 @@ import RealityKit
 import SwiftUI
 
 struct MugCheckerARViewContainer: UIViewRepresentable {
+    let vm: MugCheckerVM
+    
     func makeUIView(context: Context) -> some UIView {
-        // TODO: implement this.
-        
-        let arView = ARView(frame: .zero)
-        
-        let mugAnchor = try! PlasticMug.loadScene()
-        
-        arView.scene.addAnchor(mugAnchor)
-        
-        return arView
+        return vm.arView
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        // TODO: implement this.
+        // nothing is happening here
     }
 }

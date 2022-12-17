@@ -12,20 +12,7 @@ struct MugCheckerARView: View {
     
     var body: some View {
         ZStack {
-            MugCheckerARViewContainer()
-            
-            VStack {
-                Text("Halte deine Kamera auf eine ebene Fläche.")
-                    .foregroundColor(.black)
-                    .padding()
-                    .background(
-                        RoundedRectangle(cornerRadius: 16)
-                            .fill(.white)
-                            .shadow(radius: 3)
-                    )
-                Spacer()
-            }
-            .padding()
+            MugCheckerARViewContainer(vm: vm)
         }
     }
 }

@@ -6,11 +6,16 @@
 //
 
 import Foundation
+import RealityKit
 
 class MugCheckerVM : ObservableObject {
-   private let modelInterface: ModelInterface
+    let arView: ARView
     
     init() {
-        modelInterface = ModelInterface()
+        arView = ARView()
+        
+        let plasticMugAnchor = try! PlasticMug.loadScene()
+        
+        arView.scene.addAnchor(plasticMugAnchor)
     }
 }
