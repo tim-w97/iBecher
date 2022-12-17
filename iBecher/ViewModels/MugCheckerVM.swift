@@ -12,10 +12,32 @@ class MugCheckerVM : ObservableObject {
     let arView: ARView
     
     init() {
-        arView = ARView()
+        arView = ARView(
+            frame: .zero,
+            cameraMode: .ar,
+            automaticallyConfigureSession: true
+        )
         
-        let plasticMugAnchor = try! PlasticMug.loadScene()
+        addTopLidToScene()
+    }
+    
+    private func addTopLidToScene() {
+        guard let topLidAnchor = loadTopLidScene() else {
+            return
+        }
         
-        arView.scene.addAnchor(plasticMugAnchor)
+        arView.scene.addAnchor(topLidAnchor)
+    }
+    
+    private func loadTopLidScene() -> TopLid.Scene? {
+        do {
+            let scene = try TopLid.loadScene()
+            return scene
+        } catch {
+            print("Something went wrong while loading the Top Lid Scene:")
+            print(error)
+        }
+        
+        return nil
     }
 }

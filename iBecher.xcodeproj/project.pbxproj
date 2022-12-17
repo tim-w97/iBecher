@@ -26,7 +26,7 @@
 		577D282A293429E90076A691 /* MugCheckerARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D2829293429E90076A691 /* MugCheckerARView.swift */; };
 		577D282C29342A1C0076A691 /* CoffeeTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D282B29342A1C0076A691 /* CoffeeTrackerView.swift */; };
 		577D282E29342AA30076A691 /* CoffeeConsumptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D282D29342AA30076A691 /* CoffeeConsumptionView.swift */; };
-		57BD48BA294BCFC3009252B5 /* PlasticMug.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 57BD48B9294BCFC3009252B5 /* PlasticMug.rcproject */; };
+		57B1CD82294E135F009A9283 /* TopLid.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 57B1CD81294E135F009A9283 /* TopLid.rcproject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +50,7 @@
 		577D2829293429E90076A691 /* MugCheckerARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MugCheckerARView.swift; sourceTree = "<group>"; };
 		577D282B29342A1C0076A691 /* CoffeeTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTrackerView.swift; sourceTree = "<group>"; };
 		577D282D29342AA30076A691 /* CoffeeConsumptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeConsumptionView.swift; sourceTree = "<group>"; };
-		57BD48B9294BCFC3009252B5 /* PlasticMug.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = PlasticMug.rcproject; sourceTree = "<group>"; };
+		57B1CD81294E135F009A9283 /* TopLid.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = TopLid.rcproject; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +166,7 @@
 		57BD48B8294BCE4A009252B5 /* 3DModels */ = {
 			isa = PBXGroup;
 			children = (
-				57BD48B9294BCFC3009252B5 /* PlasticMug.rcproject */,
+				57B1CD81294E135F009A9283 /* TopLid.rcproject */,
 			);
 			path = 3DModels;
 			sourceTree = "<group>";
@@ -255,9 +255,9 @@
 				5703DABB294354B200650BD7 /* MugTypeToggle.swift in Sources */,
 				57350C8229352CE20065C9C3 /* MugType.swift in Sources */,
 				57350C7C29352A900065C9C3 /* MugCheckerVM.swift in Sources */,
-				57BD48BA294BCFC3009252B5 /* PlasticMug.rcproject in Sources */,
 				57350CA329353EA90065C9C3 /* Database.swift in Sources */,
 				57350C78293529E20065C9C3 /* ModelInterface.swift in Sources */,
+				57B1CD82294E135F009A9283 /* TopLid.rcproject in Sources */,
 				5703DAB929434F8000650BD7 /* MugButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
