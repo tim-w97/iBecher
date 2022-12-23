@@ -7,8 +7,15 @@
 
 import Foundation
 import RealityKit
+import UIKit
 
 class MugCheckerVM : ObservableObject {
+    private let initialTopLidHeight : Float = 12
+    let minTopLidHeight: Float = 4
+    let maxTopLidHeight: Float = 20
+    let topLidHeightSliderStep: Float = 1
+    let maxCupHeight: Float = 14
+    
     // height of the Top Lid in cm
     @Published var topLidHeight: Float {
         didSet {
@@ -19,7 +26,7 @@ class MugCheckerVM : ObservableObject {
     let arView: ARView
     
     init() {
-        topLidHeight = 12
+        topLidHeight = initialTopLidHeight
         arView = Database.sharedInstance.arView
     }
     
@@ -44,15 +51,19 @@ class MugCheckerVM : ObservableObject {
         topLid.position.y = topLidHeight / 100
         topLidText.position.y = (topLidHeight + 1) / 100
         
+        if topLidHeight > maxCupHeight {
+            changeColorOf(entity: topLid, to: .red)
+        } else {
+            changeColorOf(entity: topLid, to: .green)
+        }
+    }
+    
+    private func changeColorOf(entity: Entity, to: UIColor) {
         var material = SimpleMaterial()
         
-        if topLidHeight > 13 {
-            material.color = .init(tint: .red)
-        } else {
-            material.color = .init(tint: .green)
-        }
+        material.color = .init(tint: to)
         
-        guard let modelEntity = topLid.children.first as? ModelEntity else {
+        guard let modelEntity = entity.children.first as? ModelEntity else {
             return
         }
         

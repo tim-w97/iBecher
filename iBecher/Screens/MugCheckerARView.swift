@@ -19,8 +19,8 @@ struct MugCheckerARView: View {
                 
                 Slider(
                     value: $vm.topLidHeight,
-                    in: 4...20,
-                    step: 1
+                    in: vm.minTopLidHeight...vm.maxTopLidHeight,
+                    step: vm.topLidHeightSliderStep
                 ) {}
                 
                 Text("Höhe: \(Int(vm.topLidHeight)) cm")

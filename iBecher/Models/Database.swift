@@ -8,6 +8,7 @@
 import Foundation
 import RealityKit
 
+// we want to make sure that no one creates an object of this class, so we make it final
 final class Database {
     static let sharedInstance = Database()
     
