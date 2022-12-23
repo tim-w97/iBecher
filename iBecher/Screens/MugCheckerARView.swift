@@ -13,6 +13,18 @@ struct MugCheckerARView: View {
     var body: some View {
         ZStack {
             MugCheckerARViewContainer(vm: vm)
+            
+            VStack {
+                Spacer()
+                
+                Slider(
+                    value: $vm.topLidHeight,
+                    in: 4...20,
+                    step: 1
+                ) {}
+                
+                Text("Höhe: \(Int(vm.topLidHeight)) cm")
+            }.padding()
         }
     }
 }
