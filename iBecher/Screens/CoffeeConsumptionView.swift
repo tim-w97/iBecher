@@ -8,21 +8,27 @@
 import SwiftUI
 
 struct CoffeeConsumptionView: View {
+    @ObservedObject var vm: CoffeeConsumptionVM
     @State var period = "Woche"
     
     var body: some View {
-        Picker("Zeitraum", selection: $period) {
-            Text("Woche")
-            Text("Monat")
-            Text("Jahr")
-            Text("Insgesamt")
+        VStack {
+            Text("Anzahl: \(vm.coffeePurchases.count)")
+            Picker("Zeitraum", selection: $period) {
+                Text("Woche")
+                Text("Monat")
+                Text("Jahr")
+                Text("Insgesamt")
+            }
+            .pickerStyle(.wheel)
+        }.onAppear {
+            vm.loadCoffeePurchases()
         }
-        .pickerStyle(.wheel)
     }
 }
 
 struct CoffeeConsumptionView_Previews: PreviewProvider {
     static var previews: some View {
-        CoffeeConsumptionView()
+        CoffeeConsumptionView(vm: CoffeeConsumptionVM())
     }
 }

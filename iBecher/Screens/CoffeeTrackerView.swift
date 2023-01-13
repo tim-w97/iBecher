@@ -29,7 +29,7 @@ struct CoffeeTrackerView: View {
                 MugButton(
                     coffeeSize: .small,
                     selectedCoffeeSize: $vm.selectedCoffeeSize,
-                    mugType: $vm.mugType
+                    mugType: $vm.selectedMugType
                 ) {
                         vm.selectSmallCoffeeSize()
                     }.padding()
@@ -37,7 +37,7 @@ struct CoffeeTrackerView: View {
                 MugButton(
                     coffeeSize: .big,
                     selectedCoffeeSize: $vm.selectedCoffeeSize,
-                    mugType: $vm.mugType
+                    mugType: $vm.selectedMugType
                 ) {
                         vm.selectBigCoffeeSize()
                     }.padding()
@@ -47,10 +47,12 @@ struct CoffeeTrackerView: View {
             
             HStack {
                 Text("Kosten:")
-                Text("\(String(format: "%.02f", vm.price)) €").font(.largeTitle)
+                Text("\(String(format: "%.02f", vm.cost)) €").font(.largeTitle)
             }
             
-            Button("Hinzufügen") {}
+            Button("Hinzufügen") {
+                vm.addCoffeePurchase()
+            }
                 .buttonStyle(.borderedProminent)
                 .padding()
         }

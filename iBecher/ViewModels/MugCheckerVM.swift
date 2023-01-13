@@ -23,11 +23,14 @@ class MugCheckerVM : ObservableObject {
         }
     }
     
+    let modelInterface: ModelInterface
     let arView: ARView
     
     init() {
+        modelInterface = ModelInterface()
+        
         topLidHeight = initialTopLidHeight
-        arView = Database.sharedInstance.arView
+        arView = modelInterface.getARView()
     }
     
     func changeTopLidHeight() {

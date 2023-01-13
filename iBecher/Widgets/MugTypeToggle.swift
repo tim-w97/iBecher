@@ -15,9 +15,9 @@ struct MugTypeToggle: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)
-                .stroke(vm.mugType == .reusableMug ? .green : .gray, lineWidth: 8)
+                .stroke(vm.selectedMugType == .reusableMug ? .green : .gray, lineWidth: 8)
             
-            Toggle(vm.mugType == .reusableMug ? "Ja! 😍" : "Nein. 😔", isOn: $toggleValue)
+            Toggle(vm.selectedMugType == .reusableMug ? "Ja! 😍" : "Nein. 😔", isOn: $toggleValue)
                 .onChange(of: toggleValue) { newToggleValue in
                     vm.toggleMugType(toggleValue: newToggleValue)
                 }

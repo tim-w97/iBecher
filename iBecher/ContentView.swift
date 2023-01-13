@@ -22,7 +22,7 @@ struct ContentView: View {
                     Label("Tracker", systemImage: "clock.fill")
                 }.tag(1)
             
-            CoffeeConsumptionView()
+            CoffeeConsumptionView(vm: CoffeeConsumptionVM())
                 .tabItem {
                     Label("Kaffeekonsum", systemImage: "mug.fill")
                 }.tag(2)
