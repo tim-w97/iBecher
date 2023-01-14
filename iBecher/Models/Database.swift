@@ -44,19 +44,19 @@ final class Database {
         formatter.dateFormat = "dd.MM.yyyy HH:mm"
         
         allCoffeePurchases.append(
-            CoffeePurchase(date: formatter.date(from: "01.01.2022 12:34")!, size: .small, mugType: .paperMug, cost: 42.42)
+            CoffeePurchase(date: formatter.date(from: "01.01.2022 12:34")!, size: .small, mugType: .paperMug, cost: 12)
         )
         
         allCoffeePurchases.append(
-            CoffeePurchase(date: formatter.date(from: "05.03.2019 13:34")!, size: .small, mugType: .reusableMug, cost: 1.23)
+            CoffeePurchase(date: formatter.date(from: "05.02.2022 13:34")!, size: .small, mugType: .reusableMug, cost: 23)
         )
         
         allCoffeePurchases.append(
-            CoffeePurchase(date: formatter.date(from: "05.05.2021 14:34")!, size: .small, mugType: .reusableMug, cost: 1.23)
+            CoffeePurchase(date: formatter.date(from: "05.03.2022 13:34")!, size: .small, mugType: .reusableMug, cost: 34)
         )
         
         allCoffeePurchases.append(
-            CoffeePurchase(date: formatter.date(from: "05.05.2021 14:34")!, size: .small, mugType: .reusableMug, cost: 7.23)
+            CoffeePurchase(date: formatter.date(from: "05.04.2022 13:34")!, size: .small, mugType: .reusableMug, cost: 45)
         )
     }
     

@@ -18,9 +18,9 @@ struct CoffeeConsumptionView: View {
             )
             
             Picker("Zeitraum", selection: $period) {
-                Text("Woche")
-                Text("Monat")
-                Text("Jahr")
+                Text("Wöchentlich")
+                Text("Monatlich")
+                Text("Jährlich")
                 Text("Insgesamt")
             }.pickerStyle(.wheel)
         }.onAppear {
