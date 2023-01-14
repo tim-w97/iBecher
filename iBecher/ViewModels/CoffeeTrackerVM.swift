@@ -42,7 +42,8 @@ class CoffeeTrackerVM: ObservableObject {
     }
     
     func addCoffeePurchase() {
-        let purchase = CoffeePurchase(
+        let purchase = CoffeePurchase (
+            id: UUID(),
             date: Date.now,
             size: selectedCoffeeSize,
             mugType: selectedMugType,

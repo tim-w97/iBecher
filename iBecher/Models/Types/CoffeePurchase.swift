@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct CoffeePurchase {
+struct CoffeePurchase: Identifiable {
+    var id = UUID()
+    
     let date: Date
     let size: CoffeeSize
     let mugType: MugType

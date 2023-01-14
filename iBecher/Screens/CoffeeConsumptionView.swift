@@ -13,14 +13,16 @@ struct CoffeeConsumptionView: View {
     
     var body: some View {
         VStack {
-            Text("Anzahl: \(vm.coffeePurchases.count)")
+            WeeklyCoffeePurchasesView(
+                purchases: vm.getWeeklyCoffeePurchases()
+            )
+            
             Picker("Zeitraum", selection: $period) {
                 Text("Woche")
                 Text("Monat")
                 Text("Jahr")
                 Text("Insgesamt")
-            }
-            .pickerStyle(.wheel)
+            }.pickerStyle(.wheel)
         }.onAppear {
             vm.loadCoffeePurchases()
         }
