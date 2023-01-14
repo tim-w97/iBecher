@@ -12,10 +12,14 @@ struct CoffeeConsumptionView: View {
     @State var period = "Woche"
     
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             WeeklyCoffeePurchasesView(
                 purchases: vm.getWeeklyCoffeePurchases()
             )
+            
+            Rectangle()
+                .fill(.blue)
+                .frame(height: 3)
             
             Picker("Zeitraum", selection: $period) {
                 Text("Wöchentlich")
@@ -23,7 +27,8 @@ struct CoffeeConsumptionView: View {
                 Text("Jährlich")
                 Text("Insgesamt")
             }.pickerStyle(.wheel)
-        }.onAppear {
+        }
+        .onAppear {
             vm.loadCoffeePurchases()
         }
     }

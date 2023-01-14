@@ -16,7 +16,7 @@ struct WeeklyCoffeePurchasesView: View {
     
     var body: some View {
         ScrollView {
-            VStack {
+            VStack(spacing: 0) {
                 ForEach(purchases) { purchase in
                     Card {
                         VStack {
@@ -34,9 +34,9 @@ struct WeeklyCoffeePurchasesView: View {
                                 Text("Kosten insgesamt: \(String(format: "%.02f", purchase.costsTotal)) €")
                             }.padding()
                         }
-                    }.padding()
+                    }.padding(.bottom)
                 }
-            }
+            }.padding()
         }
     }
 }
