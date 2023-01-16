@@ -46,7 +46,7 @@ struct CoffeeTrackerView: View {
             
             HStack {
                 Text("Kosten:")
-                Text("\(String(format: "%.02f", vm.cost)) €").font(.largeTitle)
+                Text(vm.getCostAsString()).font(.largeTitle)
             }
             
             Button("Hinzufügen") {

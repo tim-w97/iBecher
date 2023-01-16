@@ -12,7 +12,7 @@ struct CoffeePurchases: Identifiable {
     let calendarComponentValue: Int
     let usedPaperMugs: Int
     let totalDrankCoffee: Int
-    let costsTotal: Double
+    let costsTotal: String
     
     // use the calendar component value as id
     var id: Int {

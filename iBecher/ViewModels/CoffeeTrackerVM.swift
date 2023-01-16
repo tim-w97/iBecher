@@ -15,6 +15,8 @@ class CoffeeTrackerVM: ObservableObject {
     
     @Published var cost: Double
     
+    let numberFormatter: NumberFormatter
+    
     init() {
         modelInterface = ModelInterface()
         selectedCoffeeSize = .small
@@ -23,7 +25,15 @@ class CoffeeTrackerVM: ObservableObject {
         
         cost = 0
         
+        numberFormatter = NumberFormatter()
+        numberFormatter.locale = Locale(identifier: "de_DE")
+        numberFormatter.numberStyle = .currency
+        
         calculateCoffeePrice()
+    }
+    
+    func getCostAsString() -> String {
+        return numberFormatter.string(from: cost as NSNumber)!
     }
     
     func selectSmallCoffeeSize() {

@@ -13,6 +13,8 @@ class CoffeeConsumptionVM: ObservableObject {
     private let modelInterface: ModelInterface
     private var calendar: Calendar
     
+    private let numberFormatter: NumberFormatter
+    
     init() {
         modelInterface = ModelInterface()
         
@@ -20,6 +22,11 @@ class CoffeeConsumptionVM: ObservableObject {
         calendar.locale = NSLocale(localeIdentifier: "de_DE") as Locale
         
         coffeePurchases = []
+        
+        numberFormatter = NumberFormatter()
+        numberFormatter.locale = Locale(identifier: "de_DE")
+        numberFormatter.numberStyle = .currency
+        
         loadCoffeePurchases()
     }
     
@@ -103,13 +110,15 @@ class CoffeeConsumptionVM: ObservableObject {
                 title = String(calendarComponentValue)
             }
             
+            let costsTotalAsString = numberFormatter.string(from: costsTotal as NSNumber)!
+            
             coffeePurchasesList.append(
                 CoffeePurchases(
                     title: title,
                     calendarComponentValue: calendarComponentValue,
                     usedPaperMugs: usedPaperMugs,
                     totalDrankCoffee: 0,
-                    costsTotal: costsTotal
+                    costsTotal: costsTotalAsString
                 )
             )
         }
