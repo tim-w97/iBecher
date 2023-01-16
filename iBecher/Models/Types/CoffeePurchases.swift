@@ -8,6 +8,7 @@
 import Foundation
 
 struct CoffeePurchases: Identifiable {
+    let title: String
     let calendarComponentValue: Int
     let usedPaperMugs: Int
     let totalDrankCoffee: Int

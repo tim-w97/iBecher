@@ -39,6 +39,10 @@ class CoffeeConsumptionVM: ObservableObject {
     }
     
     public func getSummarizedCoffeePurchases(forPeriod: TimePeriod) -> [CoffeePurchases] {
+        if coffeePurchases.isEmpty {
+            return []
+        }
+        
         let calendarComponent: Calendar.Component
         
         if forPeriod == .weekly {
@@ -49,8 +53,22 @@ class CoffeeConsumptionVM: ObservableObject {
             calendarComponent = .year
         }
         
+        let filteredCoffeePurchases: [CoffeePurchase]
+        
+        // only show data of the current year, except the user filters by years
+        if calendarComponent == .year {
+            filteredCoffeePurchases = coffeePurchases
+        } else {
+            filteredCoffeePurchases = coffeePurchases.filter { purchase in
+                let purchaseYear = calendar.component(.year, from: purchase.date)
+                let currentYear = calendar.component(.year, from: Date.now)
+                
+                return purchaseYear == currentYear
+            }
+        }
+        
         // get the calendar component for every purchase
-        let calendarComponents = coffeePurchases.map { purchase in
+        let calendarComponents = filteredCoffeePurchases.map { purchase in
             calendar.component(calendarComponent, from: purchase.date)
         }
         
@@ -61,6 +79,7 @@ class CoffeeConsumptionVM: ObservableObject {
         var coffeePurchasesList: [CoffeePurchases] = []
         
         for calendarComponentValue in uniqueCalendarComponents {
+            let title: String
             var usedPaperMugs: Int = 0
             var costsTotal: Double = 0
             
@@ -74,8 +93,19 @@ class CoffeeConsumptionVM: ObservableObject {
                 }
             }
             
+            if forPeriod == .weekly {
+                title = "KW \(calendarComponentValue)"
+            }
+            else if forPeriod == .monthly {
+                title = calendar.monthSymbols[calendarComponentValue]
+            }
+            else {
+                title = String(calendarComponentValue)
+            }
+            
             coffeePurchasesList.append(
                 CoffeePurchases(
+                    title: title,
                     calendarComponentValue: calendarComponentValue,
                     usedPaperMugs: usedPaperMugs,
                     totalDrankCoffee: 0,

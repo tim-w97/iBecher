@@ -13,14 +13,6 @@ struct CoffeeConsumptionView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            WeeklyCoffeePurchasesView(
-                purchases: vm.getSummarizedCoffeePurchases(forPeriod: period)
-            )
-            
-            Rectangle()
-                .fill(.blue)
-                .frame(height: 3)
-            
             Picker("Zeitraum", selection: $period) {
                 Text("Wöchentlich")
                     .tag(TimePeriod.weekly)
@@ -30,7 +22,15 @@ struct CoffeeConsumptionView: View {
                     .tag(TimePeriod.yearly)
                 Text("Insgesamt")
                     .tag(TimePeriod.total)
-            }.pickerStyle(.wheel)
+            }
+            .pickerStyle(.segmented)
+            .padding()
+            
+            Divider()
+            
+            CoffeePurchasesListView(
+                purchases: vm.getSummarizedCoffeePurchases(forPeriod: period)
+            )
         }
         .onAppear {
             vm.loadCoffeePurchases()
