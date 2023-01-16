@@ -29,10 +29,15 @@ struct CoffeeConsumptionView: View {
             
             Divider()
             
-            CoffeePurchasesListView(
-                purchases: vm.getSummarizedCoffeePurchases(forPeriod: period),
-                tabViewSelection: $tabViewSelection
-            )
+            if period == .total {
+                TotalCoffeePurchases()
+            } else {
+                CoffeePurchasesListView(
+                    purchases: vm.getSummarizedCoffeePurchases(forPeriod: period),
+                    tabViewSelection: $tabViewSelection
+                )
+            }
+            Spacer()
         }
         .onAppear {
             vm.loadCoffeePurchases()

@@ -36,7 +36,7 @@ final class Database {
         // Place the Top Lid on the ground
         addTopLidToScene()
         
-        addDummyData()
+        // addDummyData()
     }
     
     private func addDummyData() {
