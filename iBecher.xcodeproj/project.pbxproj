@@ -27,6 +27,7 @@
 		577D282C29342A1C0076A691 /* CoffeeTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D282B29342A1C0076A691 /* CoffeeTrackerView.swift */; };
 		577D282E29342AA30076A691 /* CoffeeConsumptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D282D29342AA30076A691 /* CoffeeConsumptionView.swift */; };
 		57B1CD82294E135F009A9283 /* TopLid.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 57B1CD81294E135F009A9283 /* TopLid.rcproject */; };
+		57F13ED7297557EA000944F9 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F13ED6297557EA000944F9 /* TimeInterval.swift */; };
 		57FD89972971658D00F7E4F0 /* WeeklyCoffeePurchasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD89962971658D00F7E4F0 /* WeeklyCoffeePurchasesView.swift */; };
 		57FD8999297175C100F7E4F0 /* WeeklyCoffeePurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD8998297175C100F7E4F0 /* WeeklyCoffeePurchases.swift */; };
 		57FD899B297176AB00F7E4F0 /* MonthlyCoffeePurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD899A297176AB00F7E4F0 /* MonthlyCoffeePurchases.swift */; };
@@ -56,6 +57,7 @@
 		577D282B29342A1C0076A691 /* CoffeeTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTrackerView.swift; sourceTree = "<group>"; };
 		577D282D29342AA30076A691 /* CoffeeConsumptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeConsumptionView.swift; sourceTree = "<group>"; };
 		57B1CD81294E135F009A9283 /* TopLid.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = TopLid.rcproject; sourceTree = "<group>"; };
+		57F13ED6297557EA000944F9 /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
 		57FD89962971658D00F7E4F0 /* WeeklyCoffeePurchasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyCoffeePurchasesView.swift; sourceTree = "<group>"; };
 		57FD8998297175C100F7E4F0 /* WeeklyCoffeePurchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyCoffeePurchases.swift; sourceTree = "<group>"; };
 		57FD899A297176AB00F7E4F0 /* MonthlyCoffeePurchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyCoffeePurchases.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				57FD8998297175C100F7E4F0 /* WeeklyCoffeePurchases.swift */,
 				57FD899A297176AB00F7E4F0 /* MonthlyCoffeePurchases.swift */,
 				57FD899C2971770300F7E4F0 /* YearlyCoffeePurchases.swift */,
+				57F13ED6297557EA000944F9 /* TimeInterval.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57350C8029352C550065C9C3 /* CoffeeSize.swift in Sources */,
+				57F13ED7297557EA000944F9 /* TimeInterval.swift in Sources */,
 				57350CA129352E800065C9C3 /* MugCheckerARViewContainer.swift in Sources */,
 				57350CA8293557760065C9C3 /* CoffeePrice.swift in Sources */,
 				577D281D29341F840076A691 /* ContentView.swift in Sources */,
