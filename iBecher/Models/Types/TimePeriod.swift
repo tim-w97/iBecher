@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum TimeInterval {
+enum TimePeriod {
     case weekly, monthly, yearly, total
 }

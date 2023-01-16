@@ -11,9 +11,13 @@ class CoffeeConsumptionVM: ObservableObject {
     @Published var coffeePurchases: [CoffeePurchase]
     
     private let modelInterface: ModelInterface
+    private var calendar: Calendar
     
     init() {
         modelInterface = ModelInterface()
+        
+        calendar = Calendar(identifier: .gregorian)
+        calendar.locale = NSLocale(localeIdentifier: "de_DE") as Locale
         
         coffeePurchases = []
         loadCoffeePurchases()
@@ -34,27 +38,34 @@ class CoffeeConsumptionVM: ObservableObject {
         }
     }
     
-    public func getWeeklyCoffeePurchases() -> [WeeklyCoffeePurchases] {
-        var calendar = Calendar(identifier: .gregorian)
-        calendar.locale = NSLocale(localeIdentifier: "de_DE") as Locale
+    public func getSummarizedCoffeePurchases(forPeriod: TimePeriod) -> [CoffeePurchases] {
+        let calendarComponent: Calendar.Component
         
-        // get the calendar week for every purchase
-        let calendarWeeks = coffeePurchases.map { purchase in
-            calendar.component(.weekOfYear, from: purchase.date)
+        if forPeriod == .weekly {
+            calendarComponent = .weekOfYear
+        } else if forPeriod == .monthly {
+            calendarComponent = .month
+        } else {
+            calendarComponent = .year
+        }
+        
+        // get the calendar component for every purchase
+        let calendarComponents = coffeePurchases.map { purchase in
+            calendar.component(calendarComponent, from: purchase.date)
         }
         
         // remove duplicates
-        let uniqueCalendarWeeks: [Int] = Array(Set(calendarWeeks))
+        let uniqueCalendarComponents: [Int] = Array(Set(calendarComponents))
         
         // create weekly purchase for every calendar week
-        var weeklyCoffeePurchasesList: [WeeklyCoffeePurchases] = []
+        var coffeePurchasesList: [CoffeePurchases] = []
         
-        for calendarWeek in uniqueCalendarWeeks {
+        for calendarComponentValue in uniqueCalendarComponents {
             var usedPaperMugs: Int = 0
             var costsTotal: Double = 0
             
             for purchase in coffeePurchases {
-                if calendar.component(.weekOfYear, from: purchase.date) == calendarWeek {
+                if calendar.component(calendarComponent, from: purchase.date) == calendarComponentValue {
                     if purchase.mugType == .paperMug {
                         usedPaperMugs += 1
                     }
@@ -63,9 +74,9 @@ class CoffeeConsumptionVM: ObservableObject {
                 }
             }
             
-            weeklyCoffeePurchasesList.append(
-                WeeklyCoffeePurchases(
-                    calendarWeek: calendarWeek,
+            coffeePurchasesList.append(
+                CoffeePurchases(
+                    calendarComponentValue: calendarComponentValue,
                     usedPaperMugs: usedPaperMugs,
                     totalDrankCoffee: 0,
                     costsTotal: costsTotal
@@ -73,18 +84,10 @@ class CoffeeConsumptionVM: ObservableObject {
             )
         }
         
-        weeklyCoffeePurchasesList.sort {
-            $0.calendarWeek < $1.calendarWeek
+        coffeePurchasesList.sort { (first, second) in
+            first.calendarComponentValue < second.calendarComponentValue
         }
         
-        return weeklyCoffeePurchasesList
-    }
-    
-    public func getMonthlyCoffeePurchases() -> [MonthlyCoffeePurchases] {
-        return []
-    }
-    
-    public func getYearlyCoffeePurchases() -> [YearlyCoffeePurchases] {
-        return []
+        return coffeePurchasesList
     }
 }

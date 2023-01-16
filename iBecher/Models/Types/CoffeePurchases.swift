@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct WeeklyCoffeePurchases: Identifiable {
-    let calendarWeek: Int
+struct CoffeePurchases: Identifiable {
+    let calendarComponentValue: Int
     let usedPaperMugs: Int
     let totalDrankCoffee: Int
     let costsTotal: Double
     
-    // use the calendar week as id
+    // use the calendar component value as id
     var id: Int {
-        calendarWeek
+        calendarComponentValue
     }
 }

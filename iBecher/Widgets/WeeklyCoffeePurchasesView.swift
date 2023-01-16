@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct WeeklyCoffeePurchasesView: View {
-    let purchases: [WeeklyCoffeePurchases]
+    let purchases: [CoffeePurchases]
     
-    init(purchases: [WeeklyCoffeePurchases]) {
+    init(purchases: [CoffeePurchases]) {
         self.purchases = purchases
     }
     
@@ -23,7 +23,7 @@ struct WeeklyCoffeePurchasesView: View {
                             HStack {
                                 Image(systemName: "calendar")
                                     .foregroundColor(.blue)
-                                Text("Kalenderwoche \(purchase.calendarWeek)")
+                                Text("\(purchase.calendarComponentValue)")
                             }.padding()
                             
                             Divider()
@@ -44,20 +44,20 @@ struct WeeklyCoffeePurchasesView: View {
 struct WeeklyCoffeePurchases_Previews: PreviewProvider {
     static var previews: some View {
         WeeklyCoffeePurchasesView(purchases: [
-            WeeklyCoffeePurchases(
-                calendarWeek: 2,
+            CoffeePurchases(
+                calendarComponentValue: 2,
                 usedPaperMugs: 12,
                 totalDrankCoffee: 4,
                 costsTotal: 23.5
             ),
-            WeeklyCoffeePurchases(
-                calendarWeek: 3,
+            CoffeePurchases(
+                calendarComponentValue: 3,
                 usedPaperMugs: 2,
                 totalDrankCoffee: 6,
                 costsTotal: 25.3
             ),
-            WeeklyCoffeePurchases(
-                calendarWeek: 3,
+            CoffeePurchases(
+                calendarComponentValue: 3,
                 usedPaperMugs: 2,
                 totalDrankCoffee: 6,
                 costsTotal: 25.3

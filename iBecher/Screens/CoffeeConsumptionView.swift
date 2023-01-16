@@ -9,27 +9,27 @@ import SwiftUI
 
 struct CoffeeConsumptionView: View {
     @ObservedObject var vm: CoffeeConsumptionVM
-    @State var period = TimeInterval.weekly
+    @State var period = TimePeriod.weekly
     
     var body: some View {
         VStack(spacing: 0) {
-            if period == .weekly {
-                WeeklyCoffeePurchasesView(
-                    purchases: vm.getWeeklyCoffeePurchases()
-                )
-            } else {
-                Spacer()
-            }
+            WeeklyCoffeePurchasesView(
+                purchases: vm.getSummarizedCoffeePurchases(forPeriod: period)
+            )
             
             Rectangle()
                 .fill(.blue)
                 .frame(height: 3)
             
             Picker("Zeitraum", selection: $period) {
-                Text("Wöchentlich").tag(TimeInterval.weekly)
-                Text("Monatlich").tag(TimeInterval.monthly)
-                Text("Jährlich").tag(TimeInterval.yearly)
-                Text("Insgesamt").tag(TimeInterval.total)
+                Text("Wöchentlich")
+                    .tag(TimePeriod.weekly)
+                Text("Monatlich")
+                    .tag(TimePeriod.monthly)
+                Text("Jährlich")
+                    .tag(TimePeriod.yearly)
+                Text("Insgesamt")
+                    .tag(TimePeriod.total)
             }.pickerStyle(.wheel)
         }
         .onAppear {

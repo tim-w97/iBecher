@@ -27,11 +27,9 @@
 		577D282C29342A1C0076A691 /* CoffeeTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D282B29342A1C0076A691 /* CoffeeTrackerView.swift */; };
 		577D282E29342AA30076A691 /* CoffeeConsumptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D282D29342AA30076A691 /* CoffeeConsumptionView.swift */; };
 		57B1CD82294E135F009A9283 /* TopLid.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 57B1CD81294E135F009A9283 /* TopLid.rcproject */; };
-		57F13ED7297557EA000944F9 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F13ED6297557EA000944F9 /* TimeInterval.swift */; };
+		57F13ED7297557EA000944F9 /* TimePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F13ED6297557EA000944F9 /* TimePeriod.swift */; };
 		57FD89972971658D00F7E4F0 /* WeeklyCoffeePurchasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD89962971658D00F7E4F0 /* WeeklyCoffeePurchasesView.swift */; };
-		57FD8999297175C100F7E4F0 /* WeeklyCoffeePurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD8998297175C100F7E4F0 /* WeeklyCoffeePurchases.swift */; };
-		57FD899B297176AB00F7E4F0 /* MonthlyCoffeePurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD899A297176AB00F7E4F0 /* MonthlyCoffeePurchases.swift */; };
-		57FD899D2971770300F7E4F0 /* YearlyCoffeePurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD899C2971770300F7E4F0 /* YearlyCoffeePurchases.swift */; };
+		57FD8999297175C100F7E4F0 /* CoffeePurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD8998297175C100F7E4F0 /* CoffeePurchases.swift */; };
 		57FD899F29717D3100F7E4F0 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD899E29717D3100F7E4F0 /* Card.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,11 +55,9 @@
 		577D282B29342A1C0076A691 /* CoffeeTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTrackerView.swift; sourceTree = "<group>"; };
 		577D282D29342AA30076A691 /* CoffeeConsumptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeConsumptionView.swift; sourceTree = "<group>"; };
 		57B1CD81294E135F009A9283 /* TopLid.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = TopLid.rcproject; sourceTree = "<group>"; };
-		57F13ED6297557EA000944F9 /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
+		57F13ED6297557EA000944F9 /* TimePeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePeriod.swift; sourceTree = "<group>"; };
 		57FD89962971658D00F7E4F0 /* WeeklyCoffeePurchasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyCoffeePurchasesView.swift; sourceTree = "<group>"; };
-		57FD8998297175C100F7E4F0 /* WeeklyCoffeePurchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyCoffeePurchases.swift; sourceTree = "<group>"; };
-		57FD899A297176AB00F7E4F0 /* MonthlyCoffeePurchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyCoffeePurchases.swift; sourceTree = "<group>"; };
-		57FD899C2971770300F7E4F0 /* YearlyCoffeePurchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearlyCoffeePurchases.swift; sourceTree = "<group>"; };
+		57FD8998297175C100F7E4F0 /* CoffeePurchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeePurchases.swift; sourceTree = "<group>"; };
 		57FD899E29717D3100F7E4F0 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,10 +118,8 @@
 				57350C7F29352C550065C9C3 /* CoffeeSize.swift */,
 				57350C8129352CE20065C9C3 /* MugType.swift */,
 				57350C7D29352C120065C9C3 /* CoffeePurchase.swift */,
-				57FD8998297175C100F7E4F0 /* WeeklyCoffeePurchases.swift */,
-				57FD899A297176AB00F7E4F0 /* MonthlyCoffeePurchases.swift */,
-				57FD899C2971770300F7E4F0 /* YearlyCoffeePurchases.swift */,
-				57F13ED6297557EA000944F9 /* TimeInterval.swift */,
+				57FD8998297175C100F7E4F0 /* CoffeePurchases.swift */,
+				57F13ED6297557EA000944F9 /* TimePeriod.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -260,18 +254,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				57350C8029352C550065C9C3 /* CoffeeSize.swift in Sources */,
-				57F13ED7297557EA000944F9 /* TimeInterval.swift in Sources */,
+				57F13ED7297557EA000944F9 /* TimePeriod.swift in Sources */,
 				57350CA129352E800065C9C3 /* MugCheckerARViewContainer.swift in Sources */,
 				57350CA8293557760065C9C3 /* CoffeePrice.swift in Sources */,
 				577D281D29341F840076A691 /* ContentView.swift in Sources */,
 				577D282C29342A1C0076A691 /* CoffeeTrackerView.swift in Sources */,
-				57FD899B297176AB00F7E4F0 /* MonthlyCoffeePurchases.swift in Sources */,
 				57350CA6293544350065C9C3 /* CoffeeConsumptionVM.swift in Sources */,
 				577D282A293429E90076A691 /* MugCheckerARView.swift in Sources */,
 				577D281B29341F840076A691 /* iBecherApp.swift in Sources */,
 				57350C7E29352C120065C9C3 /* CoffeePurchase.swift in Sources */,
 				577D282E29342AA30076A691 /* CoffeeConsumptionView.swift in Sources */,
-				57FD8999297175C100F7E4F0 /* WeeklyCoffeePurchases.swift in Sources */,
+				57FD8999297175C100F7E4F0 /* CoffeePurchases.swift in Sources */,
 				57FD89972971658D00F7E4F0 /* WeeklyCoffeePurchasesView.swift in Sources */,
 				57350C7A29352A420065C9C3 /* CoffeeTrackerVM.swift in Sources */,
 				5703DABB294354B200650BD7 /* MugTypeToggle.swift in Sources */,
@@ -280,7 +273,6 @@
 				57350CA329353EA90065C9C3 /* Database.swift in Sources */,
 				57FD899F29717D3100F7E4F0 /* Card.swift in Sources */,
 				57350C78293529E20065C9C3 /* ModelInterface.swift in Sources */,
-				57FD899D2971770300F7E4F0 /* YearlyCoffeePurchases.swift in Sources */,
 				57B1CD82294E135F009A9283 /* TopLid.rcproject in Sources */,
 				5703DAB929434F8000650BD7 /* MugButton.swift in Sources */,
 			);
