@@ -10,7 +10,7 @@ import SwiftUI
 struct CoffeeConsumptionView: View {
     @ObservedObject var vm: CoffeeConsumptionVM
     @State var period = TimePeriod.weekly
-    @Binding var tabViewSelection: Int
+    @Binding var tabViewSelection: TabViewSelection
     
     var body: some View {
         VStack(spacing: 0) {
@@ -42,6 +42,6 @@ struct CoffeeConsumptionView: View {
 
 struct CoffeeConsumptionView_Previews: PreviewProvider {
     static var previews: some View {
-        CoffeeConsumptionView(vm: CoffeeConsumptionVM(), tabViewSelection: .constant(1))
+        CoffeeConsumptionView(vm: CoffeeConsumptionVM(), tabViewSelection: .constant(.coffeeTracker))
     }
 }

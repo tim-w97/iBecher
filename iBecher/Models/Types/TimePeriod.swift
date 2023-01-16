@@ -8,5 +8,8 @@
 import Foundation
 
 enum TimePeriod {
-    case weekly, monthly, yearly, total
+    case weekly
+    case monthly
+    case yearly
+    case total
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CoffeePurchasesListView: View {
     let purchases: [CoffeePurchases]
-    @Binding var tabViewSelection: Int
+    @Binding var tabViewSelection: TabViewSelection
     
     var body: some View {
         if purchases.isEmpty {
@@ -19,7 +19,7 @@ struct CoffeePurchasesListView: View {
                     .padding()
                 
                 Button("Jetzt tracken"){
-                    tabViewSelection = 1
+                    tabViewSelection = .coffeeTracker
                 }
                 .padding()
             }
@@ -51,8 +51,8 @@ struct CoffeePurchasesListView: View {
     }
 }
 
-/*
-struct WeeklyCoffeePurchases_Previews: PreviewProvider {
+
+struct CoffeePurchasesListView_Previews: PreviewProvider {
     static var previews: some View {
         CoffeePurchasesListView(purchases: [
             CoffeePurchases(
@@ -77,8 +77,7 @@ struct WeeklyCoffeePurchases_Previews: PreviewProvider {
                 costsTotal: 25.3
             )
         ],
-                                .constant(1)
+        tabViewSelection: .constant(.coffeeTracker)
         )
     }
 }
-*/

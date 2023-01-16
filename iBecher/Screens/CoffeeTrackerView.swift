@@ -9,10 +9,9 @@ import SwiftUI
 
 struct CoffeeTrackerView: View {
     @ObservedObject var vm: CoffeeTrackerVM
+    @Binding var tabViewSelection: TabViewSelection
     
-    init(vm: CoffeeTrackerVM) {
-        self.vm = vm
-    }
+    @State var alertIsShown = false
     
     var body: some View {
         VStack {
@@ -31,16 +30,16 @@ struct CoffeeTrackerView: View {
                     selectedCoffeeSize: $vm.selectedCoffeeSize,
                     mugType: $vm.selectedMugType
                 ) {
-                        vm.selectSmallCoffeeSize()
-                    }.padding()
+                    vm.selectSmallCoffeeSize()
+                }.padding()
                 
                 MugButton(
                     coffeeSize: .big,
                     selectedCoffeeSize: $vm.selectedCoffeeSize,
                     mugType: $vm.selectedMugType
                 ) {
-                        vm.selectBigCoffeeSize()
-                    }.padding()
+                    vm.selectBigCoffeeSize()
+                }.padding()
             }
             
             Spacer()
@@ -52,15 +51,28 @@ struct CoffeeTrackerView: View {
             
             Button("Hinzufügen") {
                 vm.addCoffeePurchase()
+                alertIsShown = true
             }
-                .buttonStyle(.borderedProminent)
-                .padding()
+            .buttonStyle(.borderedProminent)
+            .padding()
+            .alert("Kaffee wurde hinzugefügt. 🥳", isPresented: $alertIsShown) {
+                Button("Kaffeekonsum anzeigen"){
+                    tabViewSelection = .coffeeConsumption
+                    alertIsShown = false
+                }
+                Button("Schließen"){
+                    alertIsShown = false
+                }
+            }
         }
     }
 }
 
 struct CoffeeTrackerView_Previews: PreviewProvider {
     static var previews: some View {
-        CoffeeTrackerView(vm: CoffeeTrackerVM())
+        CoffeeTrackerView(
+            vm: CoffeeTrackerVM(),
+            tabViewSelection: .constant(.coffeeTracker)
+        )
     }
 }

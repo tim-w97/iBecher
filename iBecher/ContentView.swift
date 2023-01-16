@@ -8,19 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var tabViewSelection = 1
+    @State var tabViewSelection = TabViewSelection.coffeeTracker
     
     var body: some View {
         TabView(selection: $tabViewSelection){
-            MugCheckerARView(vm: MugCheckerVM())
-                .tabItem {
-                    Label("Tasse überprüfen", systemImage: "wand.and.stars")
-                }.tag(0)
+            MugCheckerARView(
+                vm: MugCheckerVM()
+            )
+            .tabItem {
+                Label("Tasse überprüfen", systemImage: "wand.and.stars")
+            }
+            .tag(TabViewSelection.mugChecker)
             
-            CoffeeTrackerView(vm: CoffeeTrackerVM())
-                .tabItem {
-                    Label("Tracker", systemImage: "clock.fill")
-                }.tag(1)
+            CoffeeTrackerView(
+                vm: CoffeeTrackerVM(),
+                tabViewSelection: $tabViewSelection
+            )
+            .tabItem {
+                Label("Tracker", systemImage: "clock.fill")
+            }
+            .tag(TabViewSelection.coffeeTracker)
             
             CoffeeConsumptionView(
                 vm: CoffeeConsumptionVM(),
@@ -28,7 +35,8 @@ struct ContentView: View {
             )
             .tabItem {
                 Label("Kaffeekonsum", systemImage: "mug.fill")
-            }.tag(2)
+            }
+            .tag(TabViewSelection.coffeeConsumption)
         }
     }
 }
