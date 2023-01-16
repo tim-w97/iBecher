@@ -10,6 +10,7 @@ import SwiftUI
 struct CoffeeConsumptionView: View {
     @ObservedObject var vm: CoffeeConsumptionVM
     @State var period = TimePeriod.weekly
+    @Binding var tabViewSelection: Int
     
     var body: some View {
         VStack(spacing: 0) {
@@ -29,7 +30,8 @@ struct CoffeeConsumptionView: View {
             Divider()
             
             CoffeePurchasesListView(
-                purchases: vm.getSummarizedCoffeePurchases(forPeriod: period)
+                purchases: vm.getSummarizedCoffeePurchases(forPeriod: period),
+                tabViewSelection: $tabViewSelection
             )
         }
         .onAppear {
@@ -40,6 +42,6 @@ struct CoffeeConsumptionView: View {
 
 struct CoffeeConsumptionView_Previews: PreviewProvider {
     static var previews: some View {
-        CoffeeConsumptionView(vm: CoffeeConsumptionVM())
+        CoffeeConsumptionView(vm: CoffeeConsumptionVM(), tabViewSelection: .constant(1))
     }
 }

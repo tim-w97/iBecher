@@ -9,12 +9,22 @@ import SwiftUI
 
 struct CoffeePurchasesListView: View {
     let purchases: [CoffeePurchases]
-    
-    init(purchases: [CoffeePurchases]) {
-        self.purchases = purchases
-    }
+    @Binding var tabViewSelection: Int
     
     var body: some View {
+        if purchases.isEmpty {
+            VStack {
+                Text("Du hast dieses Jahr noch nichts getrackt. 😪")
+                    .multilineTextAlignment(.center)
+                    .padding()
+                
+                Button("Jetzt tracken"){
+                    tabViewSelection = 1
+                }
+                .padding()
+            }
+        }
+        
         ScrollView {
             VStack(spacing: 0) {
                 ForEach(purchases) { purchase in
@@ -41,6 +51,7 @@ struct CoffeePurchasesListView: View {
     }
 }
 
+/*
 struct WeeklyCoffeePurchases_Previews: PreviewProvider {
     static var previews: some View {
         CoffeePurchasesListView(purchases: [
@@ -65,6 +76,9 @@ struct WeeklyCoffeePurchases_Previews: PreviewProvider {
                 totalDrankCoffee: 6,
                 costsTotal: 25.3
             )
-        ])
+        ],
+                                .constant(1)
+        )
     }
 }
+*/

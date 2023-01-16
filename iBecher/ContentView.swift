@@ -22,10 +22,13 @@ struct ContentView: View {
                     Label("Tracker", systemImage: "clock.fill")
                 }.tag(1)
             
-            CoffeeConsumptionView(vm: CoffeeConsumptionVM())
-                .tabItem {
-                    Label("Kaffeekonsum", systemImage: "mug.fill")
-                }.tag(2)
+            CoffeeConsumptionView(
+                vm: CoffeeConsumptionVM(),
+                tabViewSelection: $tabViewSelection
+            )
+            .tabItem {
+                Label("Kaffeekonsum", systemImage: "mug.fill")
+            }.tag(2)
         }
     }
 }
