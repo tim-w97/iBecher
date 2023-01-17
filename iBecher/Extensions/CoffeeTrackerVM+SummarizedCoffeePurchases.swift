@@ -1,50 +1,13 @@
 //
-//  CoffeeConsumptionVM.swift
+//  CoffeeTrackerVM+SummarizedCoffeePurchases.swift
 //  iBecher
 //
-//  Created by Tim Wagner on 28.11.22.
+//  Created by Tim Wagner on 17.01.23.
 //
 
 import Foundation
 
-class CoffeeConsumptionVM: ObservableObject {
-    @Published var coffeePurchases: [CoffeePurchase]
-    
-    private let modelInterface: ModelInterface
-    private var calendar: Calendar
-    
-    private let numberFormatter: NumberFormatter
-    
-    init() {
-        modelInterface = ModelInterface()
-        
-        calendar = Calendar(identifier: .gregorian)
-        calendar.locale = NSLocale(localeIdentifier: "de_DE") as Locale
-        
-        coffeePurchases = []
-        
-        numberFormatter = NumberFormatter()
-        numberFormatter.locale = Locale(identifier: "de_DE")
-        numberFormatter.numberStyle = .currency
-        
-        loadCoffeePurchases()
-    }
-    
-    public func loadCoffeePurchases() {
-        coffeePurchases = []
-        
-        var purchase = modelInterface.getFirstCoffeePurchase()
-        
-        if purchase == nil {
-            return
-        }
-        
-        while purchase != nil {
-            coffeePurchases.append(purchase!)
-            purchase = modelInterface.getNextCoffeePurchase()
-        }
-    }
-    
+extension CoffeeTrackerVM {
     public func getSummarizedCoffeePurchases(forPeriod: TimePeriod) -> [CoffeePurchases] {
         if coffeePurchases.isEmpty {
             return []

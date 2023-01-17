@@ -1,5 +1,5 @@
 //
-//  CoffeeTrackerVM.swift
+//  CoffeeConsumptionVM.swift
 //  iBecher
 //
 //  Created by Tim Wagner on 28.11.22.
@@ -8,17 +8,25 @@
 import Foundation
 
 class CoffeeTrackerVM: ObservableObject {
-    private let modelInterface: ModelInterface
+    @Published var coffeePurchases: [CoffeePurchase]
     
     @Published var selectedCoffeeSize: CoffeeSize
     @Published var selectedMugType: MugType
-    
     @Published var cost: Double
+    
+    private let modelInterface: ModelInterface
+    var calendar: Calendar
     
     let numberFormatter: NumberFormatter
     
     init() {
         modelInterface = ModelInterface()
+        
+        calendar = Calendar(identifier: .gregorian)
+        calendar.locale = NSLocale(localeIdentifier: "de_DE") as Locale
+        
+        coffeePurchases = []
+        
         selectedCoffeeSize = .small
         
         selectedMugType = .paperMug
@@ -29,6 +37,7 @@ class CoffeeTrackerVM: ObservableObject {
         numberFormatter.locale = Locale(identifier: "de_DE")
         numberFormatter.numberStyle = .currency
         
+        loadCoffeePurchases()
         calculateCoffeePrice()
     }
     
@@ -61,6 +70,8 @@ class CoffeeTrackerVM: ObservableObject {
         )
         
         modelInterface.addCoffeePurchase(purchase: purchase)
+        
+        loadCoffeePurchases()
     }
     
     private func calculateCoffeePrice() {
@@ -74,6 +85,21 @@ class CoffeeTrackerVM: ObservableObject {
         
         if selectedMugType == .paperMug {
             cost += 0.15
+        }
+    }
+    
+    public func loadCoffeePurchases() {
+        coffeePurchases = []
+        
+        var purchase = modelInterface.getFirstCoffeePurchase()
+        
+        if purchase == nil {
+            return
+        }
+        
+        while purchase != nil {
+            coffeePurchases.append(purchase!)
+            purchase = modelInterface.getNextCoffeePurchase()
         }
     }
 }

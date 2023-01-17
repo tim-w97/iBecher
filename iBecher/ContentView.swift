@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @State var tabViewSelection = TabViewSelection.coffeeTracker
     
+    let coffeeTrackerVM = CoffeeTrackerVM()
+    
     var body: some View {
         TabView(selection: $tabViewSelection){
             MugCheckerARView(
@@ -21,7 +23,7 @@ struct ContentView: View {
             .tag(TabViewSelection.mugChecker)
             
             CoffeeTrackerView(
-                vm: CoffeeTrackerVM(),
+                vm: coffeeTrackerVM,
                 tabViewSelection: $tabViewSelection
             )
             .tabItem {
@@ -30,7 +32,7 @@ struct ContentView: View {
             .tag(TabViewSelection.coffeeTracker)
             
             CoffeeConsumptionView(
-                vm: CoffeeConsumptionVM(),
+                vm: coffeeTrackerVM,
                 tabViewSelection: $tabViewSelection
             )
             .tabItem {

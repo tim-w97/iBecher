@@ -10,14 +10,13 @@
 		5703DAB929434F8000650BD7 /* MugButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5703DAB829434F8000650BD7 /* MugButton.swift */; };
 		5703DABB294354B200650BD7 /* MugTypeToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5703DABA294354B200650BD7 /* MugTypeToggle.swift */; };
 		57350C78293529E20065C9C3 /* ModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350C77293529E20065C9C3 /* ModelInterface.swift */; };
-		57350C7A29352A420065C9C3 /* CoffeeTrackerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350C7929352A420065C9C3 /* CoffeeTrackerVM.swift */; };
 		57350C7C29352A900065C9C3 /* MugCheckerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350C7B29352A900065C9C3 /* MugCheckerVM.swift */; };
 		57350C7E29352C120065C9C3 /* CoffeePurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350C7D29352C120065C9C3 /* CoffeePurchase.swift */; };
 		57350C8029352C550065C9C3 /* CoffeeSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350C7F29352C550065C9C3 /* CoffeeSize.swift */; };
 		57350C8229352CE20065C9C3 /* MugType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350C8129352CE20065C9C3 /* MugType.swift */; };
 		57350CA129352E800065C9C3 /* MugCheckerARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350CA029352E800065C9C3 /* MugCheckerARViewContainer.swift */; };
 		57350CA329353EA90065C9C3 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350CA229353EA90065C9C3 /* Database.swift */; };
-		57350CA6293544350065C9C3 /* CoffeeConsumptionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350CA5293544350065C9C3 /* CoffeeConsumptionVM.swift */; };
+		57350CA6293544350065C9C3 /* CoffeeTrackerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350CA5293544350065C9C3 /* CoffeeTrackerVM.swift */; };
 		57350CA8293557760065C9C3 /* CoffeePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57350CA7293557760065C9C3 /* CoffeePrice.swift */; };
 		577D281B29341F840076A691 /* iBecherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D281A29341F840076A691 /* iBecherApp.swift */; };
 		577D281D29341F840076A691 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D281C29341F840076A691 /* ContentView.swift */; };
@@ -26,6 +25,7 @@
 		577D282A293429E90076A691 /* MugCheckerARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D2829293429E90076A691 /* MugCheckerARView.swift */; };
 		577D282C29342A1C0076A691 /* CoffeeTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D282B29342A1C0076A691 /* CoffeeTrackerView.swift */; };
 		577D282E29342AA30076A691 /* CoffeeConsumptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D282D29342AA30076A691 /* CoffeeConsumptionView.swift */; };
+		57911E652976CC8A0085079A /* CoffeeTrackerVM+SummarizedCoffeePurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57911E642976CC8A0085079A /* CoffeeTrackerVM+SummarizedCoffeePurchases.swift */; };
 		57B1CD82294E135F009A9283 /* TopLid.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 57B1CD81294E135F009A9283 /* TopLid.rcproject */; };
 		57F13ED7297557EA000944F9 /* TimePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F13ED6297557EA000944F9 /* TimePeriod.swift */; };
 		57F13ED92975A675000944F9 /* TabViewSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F13ED82975A675000944F9 /* TabViewSelection.swift */; };
@@ -39,14 +39,13 @@
 		5703DAB829434F8000650BD7 /* MugButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MugButton.swift; sourceTree = "<group>"; };
 		5703DABA294354B200650BD7 /* MugTypeToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MugTypeToggle.swift; sourceTree = "<group>"; };
 		57350C77293529E20065C9C3 /* ModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelInterface.swift; sourceTree = "<group>"; };
-		57350C7929352A420065C9C3 /* CoffeeTrackerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTrackerVM.swift; sourceTree = "<group>"; };
 		57350C7B29352A900065C9C3 /* MugCheckerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MugCheckerVM.swift; sourceTree = "<group>"; };
 		57350C7D29352C120065C9C3 /* CoffeePurchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeePurchase.swift; sourceTree = "<group>"; };
 		57350C7F29352C550065C9C3 /* CoffeeSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeSize.swift; sourceTree = "<group>"; };
 		57350C8129352CE20065C9C3 /* MugType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MugType.swift; sourceTree = "<group>"; };
 		57350CA029352E800065C9C3 /* MugCheckerARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MugCheckerARViewContainer.swift; sourceTree = "<group>"; };
 		57350CA229353EA90065C9C3 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
-		57350CA5293544350065C9C3 /* CoffeeConsumptionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeConsumptionVM.swift; sourceTree = "<group>"; };
+		57350CA5293544350065C9C3 /* CoffeeTrackerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTrackerVM.swift; sourceTree = "<group>"; };
 		57350CA7293557760065C9C3 /* CoffeePrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeePrice.swift; sourceTree = "<group>"; };
 		577D281729341F840076A691 /* iBecher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBecher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		577D281A29341F840076A691 /* iBecherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBecherApp.swift; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		577D2829293429E90076A691 /* MugCheckerARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MugCheckerARView.swift; sourceTree = "<group>"; };
 		577D282B29342A1C0076A691 /* CoffeeTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTrackerView.swift; sourceTree = "<group>"; };
 		577D282D29342AA30076A691 /* CoffeeConsumptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeConsumptionView.swift; sourceTree = "<group>"; };
+		57911E642976CC8A0085079A /* CoffeeTrackerVM+SummarizedCoffeePurchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoffeeTrackerVM+SummarizedCoffeePurchases.swift"; sourceTree = "<group>"; };
 		57B1CD81294E135F009A9283 /* TopLid.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = TopLid.rcproject; sourceTree = "<group>"; };
 		57F13ED6297557EA000944F9 /* TimePeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePeriod.swift; sourceTree = "<group>"; };
 		57F13ED82975A675000944F9 /* TabViewSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewSelection.swift; sourceTree = "<group>"; };
@@ -102,9 +102,8 @@
 		57350C75293529430065C9C3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				57350C7929352A420065C9C3 /* CoffeeTrackerVM.swift */,
 				57350C7B29352A900065C9C3 /* MugCheckerVM.swift */,
-				57350CA5293544350065C9C3 /* CoffeeConsumptionVM.swift */,
+				57350CA5293544350065C9C3 /* CoffeeTrackerVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -149,6 +148,7 @@
 		577D281929341F840076A691 /* iBecher */ = {
 			isa = PBXGroup;
 			children = (
+				57911E632976CC6A0085079A /* Extensions */,
 				57BD48B8294BCE4A009252B5 /* 3DModels */,
 				57350C76293529D40065C9C3 /* Utils */,
 				57350C75293529430065C9C3 /* ViewModels */,
@@ -179,6 +179,14 @@
 				577D282D29342AA30076A691 /* CoffeeConsumptionView.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		57911E632976CC6A0085079A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				57911E642976CC8A0085079A /* CoffeeTrackerVM+SummarizedCoffeePurchases.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		57BD48B8294BCE4A009252B5 /* 3DModels */ = {
@@ -265,15 +273,15 @@
 				57350CA8293557760065C9C3 /* CoffeePrice.swift in Sources */,
 				577D281D29341F840076A691 /* ContentView.swift in Sources */,
 				577D282C29342A1C0076A691 /* CoffeeTrackerView.swift in Sources */,
-				57350CA6293544350065C9C3 /* CoffeeConsumptionVM.swift in Sources */,
+				57350CA6293544350065C9C3 /* CoffeeTrackerVM.swift in Sources */,
 				57F13ED92975A675000944F9 /* TabViewSelection.swift in Sources */,
 				577D282A293429E90076A691 /* MugCheckerARView.swift in Sources */,
+				57911E652976CC8A0085079A /* CoffeeTrackerVM+SummarizedCoffeePurchases.swift in Sources */,
 				577D281B29341F840076A691 /* iBecherApp.swift in Sources */,
 				57350C7E29352C120065C9C3 /* CoffeePurchase.swift in Sources */,
 				577D282E29342AA30076A691 /* CoffeeConsumptionView.swift in Sources */,
 				57FD8999297175C100F7E4F0 /* CoffeePurchases.swift in Sources */,
 				57FD89972971658D00F7E4F0 /* CoffeePurchasesListView.swift in Sources */,
-				57350C7A29352A420065C9C3 /* CoffeeTrackerVM.swift in Sources */,
 				57F24E062975FDE600B41EA3 /* TotalCoffeePurchases.swift in Sources */,
 				5703DABB294354B200650BD7 /* MugTypeToggle.swift in Sources */,
 				57350C8229352CE20065C9C3 /* MugType.swift in Sources */,
