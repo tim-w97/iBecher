@@ -74,6 +74,26 @@ class CoffeeTrackerVM: ObservableObject {
         loadCoffeePurchases()
     }
     
+    func getTotalCoffeePurchases() -> TotalCoffeePurchases {
+        var usedPaperMugs: Int = 0
+        var totalDrankCoffee: Double = 0
+        var costsTotal: Double = 0
+        
+        for purchase in coffeePurchases {
+            if purchase.mugType == .paperMug {
+                usedPaperMugs += 1
+            }
+            
+            costsTotal += purchase.cost
+        }
+        
+        return TotalCoffeePurchases(
+            usedPaperMugs: usedPaperMugs,
+            totalDrankCoffee: String(totalDrankCoffee),
+            costsTotal: numberFormatter.string(from: costsTotal as NSNumber)!
+        )
+    }
+    
     private func calculateCoffeePrice() {
         cost = 0
         

@@ -30,7 +30,9 @@ struct CoffeeConsumptionView: View {
             Divider()
             
             if period == .total {
-                TotalCoffeePurchases()
+                TotalCoffeePurchasesView(
+                    totalCoffeePurchases: vm.getTotalCoffeePurchases()
+                )
             } else {
                 CoffeePurchasesListView(
                     purchases: vm.getSummarizedCoffeePurchases(forPeriod: period),
