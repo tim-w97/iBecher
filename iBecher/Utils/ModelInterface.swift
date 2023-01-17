@@ -20,26 +20,35 @@ class ModelInterface {
     }
     
     public func addCoffeePurchase(purchase: CoffeePurchase) {
-        Database.sharedInstance.allCoffeePurchases.append(purchase)
+        Database.sharedInstance.coffeePurchases.append(purchase)
+        
+        saveDataToDisk(coffeePurchases: Database.sharedInstance.coffeePurchases) { result in
+            switch result {
+            case .failure(let error):
+                fatalError(error.localizedDescription)
+            case .success(let coffeePurchasesCount):
+                print(coffeePurchasesCount)
+            }
+        }
     }
     
     public func getFirstCoffeePurchase() -> CoffeePurchase? {
         index = 0
         
-        if Database.sharedInstance.allCoffeePurchases.isEmpty {
+        if Database.sharedInstance.coffeePurchases.isEmpty {
             return nil
         }
         
-        return Database.sharedInstance.allCoffeePurchases[index]
+        return Database.sharedInstance.coffeePurchases[index]
     }
     
     public func getNextCoffeePurchase() -> CoffeePurchase? {
         index += 1
         
-        if index > Database.sharedInstance.allCoffeePurchases.count - 1 {
+        if index > Database.sharedInstance.coffeePurchases.count - 1 {
             return nil
         }
         
-        return Database.sharedInstance.allCoffeePurchases[index]
+        return Database.sharedInstance.coffeePurchases[index]
     }
 }

@@ -27,6 +27,7 @@
 		577D282E29342AA30076A691 /* CoffeeConsumptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577D282D29342AA30076A691 /* CoffeeConsumptionView.swift */; };
 		57911E652976CC8A0085079A /* CoffeeTrackerVM+SummarizedCoffeePurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57911E642976CC8A0085079A /* CoffeeTrackerVM+SummarizedCoffeePurchases.swift */; };
 		57911E672977281B0085079A /* TotalCoffeePurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57911E662977281B0085079A /* TotalCoffeePurchases.swift */; };
+		57911E6929772E430085079A /* ModelInterface+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57911E6829772E430085079A /* ModelInterface+Persistence.swift */; };
 		57B1CD82294E135F009A9283 /* TopLid.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 57B1CD81294E135F009A9283 /* TopLid.rcproject */; };
 		57F13ED7297557EA000944F9 /* TimePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F13ED6297557EA000944F9 /* TimePeriod.swift */; };
 		57F13ED92975A675000944F9 /* TabViewSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F13ED82975A675000944F9 /* TabViewSelection.swift */; };
@@ -58,6 +59,7 @@
 		577D282D29342AA30076A691 /* CoffeeConsumptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeConsumptionView.swift; sourceTree = "<group>"; };
 		57911E642976CC8A0085079A /* CoffeeTrackerVM+SummarizedCoffeePurchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoffeeTrackerVM+SummarizedCoffeePurchases.swift"; sourceTree = "<group>"; };
 		57911E662977281B0085079A /* TotalCoffeePurchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCoffeePurchases.swift; sourceTree = "<group>"; };
+		57911E6829772E430085079A /* ModelInterface+Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelInterface+Persistence.swift"; sourceTree = "<group>"; };
 		57B1CD81294E135F009A9283 /* TopLid.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = TopLid.rcproject; sourceTree = "<group>"; };
 		57F13ED6297557EA000944F9 /* TimePeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePeriod.swift; sourceTree = "<group>"; };
 		57F13ED82975A675000944F9 /* TabViewSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewSelection.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				57350C77293529E20065C9C3 /* ModelInterface.swift */,
+				57911E6829772E430085079A /* ModelInterface+Persistence.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				57FD899F29717D3100F7E4F0 /* Card.swift in Sources */,
 				57350C78293529E20065C9C3 /* ModelInterface.swift in Sources */,
 				57B1CD82294E135F009A9283 /* TopLid.rcproject in Sources */,
+				57911E6929772E430085079A /* ModelInterface+Persistence.swift in Sources */,
 				5703DAB929434F8000650BD7 /* MugButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

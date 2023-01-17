@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CoffeePurchase: Identifiable {
+struct CoffeePurchase: Identifiable, Codable {
     var id = UUID()
     
     let date: Date

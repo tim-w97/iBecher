@@ -22,10 +22,10 @@ class CoffeeTrackerVM: ObservableObject {
     init() {
         modelInterface = ModelInterface()
         
+        coffeePurchases = []
+        
         calendar = Calendar(identifier: .gregorian)
         calendar.locale = NSLocale(localeIdentifier: "de_DE") as Locale
-        
-        coffeePurchases = []
         
         selectedCoffeeSize = .small
         
@@ -37,7 +37,8 @@ class CoffeeTrackerVM: ObservableObject {
         numberFormatter.locale = Locale(identifier: "de_DE")
         numberFormatter.numberStyle = .currency
         
-        loadCoffeePurchases()
+        loadDataFromDisk()
+        
         calculateCoffeePrice()
     }
     
@@ -71,7 +72,7 @@ class CoffeeTrackerVM: ObservableObject {
         
         modelInterface.addCoffeePurchase(purchase: purchase)
         
-        loadCoffeePurchases()
+        refreshCoffeePurchasesList()
     }
     
     func getTotalCoffeePurchases() -> TotalCoffeePurchases {
@@ -108,7 +109,7 @@ class CoffeeTrackerVM: ObservableObject {
         }
     }
     
-    public func loadCoffeePurchases() {
+    public func refreshCoffeePurchasesList() {
         coffeePurchases = []
         
         var purchase = modelInterface.getFirstCoffeePurchase()
@@ -120,6 +121,20 @@ class CoffeeTrackerVM: ObservableObject {
         while purchase != nil {
             coffeePurchases.append(purchase!)
             purchase = modelInterface.getNextCoffeePurchase()
+        }
+    }
+    
+    func loadDataFromDisk() {
+        modelInterface.loadDataFromDisk { result in
+            switch result {
+                
+            case .failure(let error):
+                fatalError(error.localizedDescription)
+                
+            case .success(let coffeePurchases):
+                Database.sharedInstance.coffeePurchases = coffeePurchases
+                self.refreshCoffeePurchasesList()
+            }
         }
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum MugType {
+enum MugType: Codable {
     case paperMug
     case reusableMug
 }
