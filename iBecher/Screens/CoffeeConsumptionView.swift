@@ -27,8 +27,6 @@ struct CoffeeConsumptionView: View {
             .pickerStyle(.segmented)
             .padding()
             
-            Divider()
-            
             if period == .total {
                 TotalCoffeePurchasesView(
                     totalCoffeePurchases: vm.getTotalCoffeePurchases()
