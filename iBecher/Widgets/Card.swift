@@ -13,7 +13,7 @@ struct Card<Content:View>: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)
-                .fill(.white)
+                .foregroundColor(.cardColor)
                 .shadow(radius: 3)
             
             content

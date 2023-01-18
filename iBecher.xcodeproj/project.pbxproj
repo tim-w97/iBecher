@@ -29,6 +29,7 @@
 		57911E672977281B0085079A /* TotalCoffeePurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57911E662977281B0085079A /* TotalCoffeePurchases.swift */; };
 		57911E6929772E430085079A /* ModelInterface+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57911E6829772E430085079A /* ModelInterface+Persistence.swift */; };
 		57B1CD82294E135F009A9283 /* TopLid.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 57B1CD81294E135F009A9283 /* TopLid.rcproject */; };
+		57B80E1F2977FB920015AD7A /* Color+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B80E1E2977FB920015AD7A /* Color+CustomColors.swift */; };
 		57F13ED7297557EA000944F9 /* TimePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F13ED6297557EA000944F9 /* TimePeriod.swift */; };
 		57F13ED92975A675000944F9 /* TabViewSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F13ED82975A675000944F9 /* TabViewSelection.swift */; };
 		57F24E062975FDE600B41EA3 /* TotalCoffeePurchasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F24E052975FDE600B41EA3 /* TotalCoffeePurchasesView.swift */; };
@@ -61,6 +62,7 @@
 		57911E662977281B0085079A /* TotalCoffeePurchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCoffeePurchases.swift; sourceTree = "<group>"; };
 		57911E6829772E430085079A /* ModelInterface+Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelInterface+Persistence.swift"; sourceTree = "<group>"; };
 		57B1CD81294E135F009A9283 /* TopLid.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = TopLid.rcproject; sourceTree = "<group>"; };
+		57B80E1E2977FB920015AD7A /* Color+CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+CustomColors.swift"; sourceTree = "<group>"; };
 		57F13ED6297557EA000944F9 /* TimePeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePeriod.swift; sourceTree = "<group>"; };
 		57F13ED82975A675000944F9 /* TabViewSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewSelection.swift; sourceTree = "<group>"; };
 		57F24E052975FDE600B41EA3 /* TotalCoffeePurchasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCoffeePurchasesView.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				57911E642976CC8A0085079A /* CoffeeTrackerVM+SummarizedCoffeePurchases.swift */,
+				57B80E1E2977FB920015AD7A /* Color+CustomColors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				57350CA6293544350065C9C3 /* CoffeeTrackerVM.swift in Sources */,
 				57F13ED92975A675000944F9 /* TabViewSelection.swift in Sources */,
 				577D282A293429E90076A691 /* MugCheckerARView.swift in Sources */,
+				57B80E1F2977FB920015AD7A /* Color+CustomColors.swift in Sources */,
 				57911E652976CC8A0085079A /* CoffeeTrackerVM+SummarizedCoffeePurchases.swift in Sources */,
 				577D281B29341F840076A691 /* iBecherApp.swift in Sources */,
 				57350C7E29352C120065C9C3 /* CoffeePurchase.swift in Sources */,
