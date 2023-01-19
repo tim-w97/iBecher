@@ -59,21 +59,21 @@ struct CoffeePurchasesListView_Previews: PreviewProvider {
                 title: "Test 123",
                 calendarComponentValue: 2,
                 usedPaperMugs: 12,
-                totalDrankCoffee: 4,
+                totalDrankCoffee: "42",
                 costsTotal: "6,50 €"
             ),
             CoffeePurchases(
                 title: "Test 123",
                 calendarComponentValue: 3,
                 usedPaperMugs: 2,
-                totalDrankCoffee: 6,
+                totalDrankCoffee: "42",
                 costsTotal: "6,50 €"
             ),
             CoffeePurchases(
                 title: "Test 123",
                 calendarComponentValue: 3,
                 usedPaperMugs: 2,
-                totalDrankCoffee: 6,
+                totalDrankCoffee: "42",
                 costsTotal: "6,50 €"
             )
         ],

@@ -17,6 +17,7 @@ class CoffeeTrackerVM: ObservableObject {
     private let modelInterface: ModelInterface
     var calendar: Calendar
     
+    let currencyFormatter: NumberFormatter
     let numberFormatter: NumberFormatter
     
     init() {
@@ -33,9 +34,13 @@ class CoffeeTrackerVM: ObservableObject {
         
         cost = 0
         
+        currencyFormatter = NumberFormatter()
+        currencyFormatter.locale = Locale(identifier: "de_DE")
+        currencyFormatter.numberStyle = .currency
+        
         numberFormatter = NumberFormatter()
         numberFormatter.locale = Locale(identifier: "de_DE")
-        numberFormatter.numberStyle = .currency
+        numberFormatter.numberStyle = .decimal
         
         loadDataFromDisk()
         
@@ -43,7 +48,7 @@ class CoffeeTrackerVM: ObservableObject {
     }
     
     func getCostAsString() -> String {
-        return numberFormatter.string(from: cost as NSNumber)!
+        return currencyFormatter.string(from: cost as NSNumber)!
     }
     
     func selectSmallCoffeeSize() {
@@ -84,13 +89,20 @@ class CoffeeTrackerVM: ObservableObject {
                 usedPaperMugs += 1
             }
             
+            if purchase.size == .small {
+                totalDrankCoffee += CoffeeAmount.small
+            }
+            if purchase.size == .big {
+                totalDrankCoffee += CoffeeAmount.big
+            }
+            
             costsTotal += calculateCoffeePrice(forPurchase: purchase)
         }
         
         return TotalCoffeePurchases(
             usedPaperMugs: usedPaperMugs,
-            totalDrankCoffee: String(totalDrankCoffee),
-            costsTotal: numberFormatter.string(from: costsTotal as NSNumber)!
+            totalDrankCoffee: numberFormatter.string(from: totalDrankCoffee as NSNumber)!,
+            costsTotal: currencyFormatter.string(from: costsTotal as NSNumber)!
         )
     }
     

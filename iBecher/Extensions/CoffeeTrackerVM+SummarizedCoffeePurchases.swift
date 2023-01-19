@@ -52,6 +52,7 @@ extension CoffeeTrackerVM {
             let title: String
             var usedPaperMugs: Int = 0
             var costsTotal: Double = 0
+            var totalDrankCoffee: Double = 0
             
             for purchase in coffeePurchases {
                 if calendar.component(calendarComponent, from: purchase.date) == calendarComponentValue {
@@ -60,6 +61,14 @@ extension CoffeeTrackerVM {
                     }
                     
                     costsTotal += calculateCoffeePrice(forPurchase: purchase)
+                    
+                    if purchase.size == .small {
+                        totalDrankCoffee += CoffeeAmount.small
+                    }
+                    if purchase.size == .big {
+                        totalDrankCoffee += CoffeeAmount.big
+                    }
+                    
                 }
             }
             
@@ -73,14 +82,15 @@ extension CoffeeTrackerVM {
                 title = String(calendarComponentValue)
             }
             
-            let costsTotalAsString = numberFormatter.string(from: costsTotal as NSNumber)!
+            let costsTotalAsString = currencyFormatter.string(from: costsTotal as NSNumber)!
+            let totalDrankCoffeeAsString = numberFormatter.string(from: totalDrankCoffee as NSNumber)!
             
             coffeePurchasesList.append(
                 CoffeePurchases(
                     title: title,
                     calendarComponentValue: calendarComponentValue,
                     usedPaperMugs: usedPaperMugs,
-                    totalDrankCoffee: 0,
+                    totalDrankCoffee: totalDrankCoffeeAsString,
                     costsTotal: costsTotalAsString
                 )
             )

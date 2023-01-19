@@ -13,7 +13,7 @@ struct TotalCoffeePurchasesView: View {
     var body: some View {
         VStack {
             Text("Benutze Pappbecher: \(totalCoffeePurchases.usedPaperMugs)")
-            Text("Getrunkener Kaffee: \(totalCoffeePurchases.totalDrankCoffee)")
+            Text("Getrunkener Kaffee: \(totalCoffeePurchases.totalDrankCoffee) Liter")
             Text("Kosten insgesamt: \(totalCoffeePurchases.costsTotal)")
         }
         .padding()
@@ -25,7 +25,7 @@ struct TotalCoffeePurchases_Previews: PreviewProvider {
         TotalCoffeePurchasesView(
             totalCoffeePurchases: TotalCoffeePurchases(
                 usedPaperMugs: 13,
-                totalDrankCoffee: "34 Liter",
+                totalDrankCoffee: "34",
                 costsTotal: "42,35 €"
             )
         )
