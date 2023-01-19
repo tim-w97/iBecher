@@ -13,5 +13,4 @@ struct CoffeePurchase: Identifiable, Codable {
     let date: Date
     let size: CoffeeSize
     let mugType: MugType
-    let cost: Double
 }

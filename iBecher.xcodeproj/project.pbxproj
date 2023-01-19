@@ -30,6 +30,7 @@
 		57911E6929772E430085079A /* ModelInterface+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57911E6829772E430085079A /* ModelInterface+Persistence.swift */; };
 		57B1CD82294E135F009A9283 /* TopLid.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 57B1CD81294E135F009A9283 /* TopLid.rcproject */; };
 		57B80E1F2977FB920015AD7A /* Color+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B80E1E2977FB920015AD7A /* Color+CustomColors.swift */; };
+		57BDAA3C2979A312007C7B60 /* CoffeeAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BDAA3B2979A312007C7B60 /* CoffeeAmount.swift */; };
 		57F13ED7297557EA000944F9 /* TimePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F13ED6297557EA000944F9 /* TimePeriod.swift */; };
 		57F13ED92975A675000944F9 /* TabViewSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F13ED82975A675000944F9 /* TabViewSelection.swift */; };
 		57F24E062975FDE600B41EA3 /* TotalCoffeePurchasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F24E052975FDE600B41EA3 /* TotalCoffeePurchasesView.swift */; };
@@ -63,6 +64,7 @@
 		57911E6829772E430085079A /* ModelInterface+Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelInterface+Persistence.swift"; sourceTree = "<group>"; };
 		57B1CD81294E135F009A9283 /* TopLid.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = TopLid.rcproject; sourceTree = "<group>"; };
 		57B80E1E2977FB920015AD7A /* Color+CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+CustomColors.swift"; sourceTree = "<group>"; };
+		57BDAA3B2979A312007C7B60 /* CoffeeAmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeAmount.swift; sourceTree = "<group>"; };
 		57F13ED6297557EA000944F9 /* TimePeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePeriod.swift; sourceTree = "<group>"; };
 		57F13ED82975A675000944F9 /* TabViewSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewSelection.swift; sourceTree = "<group>"; };
 		57F24E052975FDE600B41EA3 /* TotalCoffeePurchasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCoffeePurchasesView.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				57350CA429353FC40065C9C3 /* Types */,
 				57350CA229353EA90065C9C3 /* Database.swift */,
 				57350CA7293557760065C9C3 /* CoffeePrice.swift */,
+				57BDAA3B2979A312007C7B60 /* CoffeeAmount.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				577D282E29342AA30076A691 /* CoffeeConsumptionView.swift in Sources */,
 				57FD8999297175C100F7E4F0 /* CoffeePurchases.swift in Sources */,
 				57FD89972971658D00F7E4F0 /* CoffeePurchasesListView.swift in Sources */,
+				57BDAA3C2979A312007C7B60 /* CoffeeAmount.swift in Sources */,
 				57F24E062975FDE600B41EA3 /* TotalCoffeePurchasesView.swift in Sources */,
 				5703DABB294354B200650BD7 /* MugTypeToggle.swift in Sources */,
 				57350C8229352CE20065C9C3 /* MugType.swift in Sources */,

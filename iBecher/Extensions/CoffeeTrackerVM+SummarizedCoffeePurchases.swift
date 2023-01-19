@@ -59,7 +59,7 @@ extension CoffeeTrackerVM {
                         usedPaperMugs += 1
                     }
                     
-                    costsTotal += purchase.cost
+                    costsTotal += calculateCoffeePrice(forPurchase: purchase)
                 }
             }
             

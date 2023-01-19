@@ -66,8 +66,7 @@ class CoffeeTrackerVM: ObservableObject {
             id: UUID(),
             date: Date.now,
             size: selectedCoffeeSize,
-            mugType: selectedMugType,
-            cost: cost
+            mugType: selectedMugType
         )
         
         modelInterface.addCoffeePurchase(purchase: purchase)
@@ -85,7 +84,7 @@ class CoffeeTrackerVM: ObservableObject {
                 usedPaperMugs += 1
             }
             
-            costsTotal += purchase.cost
+            costsTotal += calculateCoffeePrice(forPurchase: purchase)
         }
         
         return TotalCoffeePurchases(
@@ -95,17 +94,35 @@ class CoffeeTrackerVM: ObservableObject {
         )
     }
     
-    private func calculateCoffeePrice() {
+    func calculateCoffeePrice(forPurchase:CoffeePurchase) -> Double {
+        var cost:Double = 0
+        
+        if forPurchase.size == .small {
+            cost += CoffeePrice.small
+        }
+        if forPurchase.size == .big {
+            cost += CoffeePrice.big
+        }
+        
+        if forPurchase.mugType == .paperMug {
+            cost += CoffeePrice.paperMug
+        }
+        
+        return cost
+    }
+    
+    func calculateCoffeePrice() {
         cost = 0
         
         if selectedCoffeeSize == .small {
-            cost += 0.70
-        } else {
-            cost += 1.00
+            cost += CoffeePrice.small
+        }
+        if selectedCoffeeSize == .big {
+            cost += CoffeePrice.big
         }
         
         if selectedMugType == .paperMug {
-            cost += 0.15
+            cost += CoffeePrice.paperMug
         }
     }
     
