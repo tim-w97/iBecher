@@ -11,10 +11,16 @@ struct MugCheckerARView: View {
     @ObservedObject var vm: MugCheckerVM
     
     var body: some View {
+        let topText: String = vm.lidIsOverMaxCupHeight ?
+        "Deine Tasse ist zu groß. 😥" :
+        "Deine Tasse passt in den Automaten! 🍀"
+        
         ZStack {
             MugCheckerARViewContainer(vm: vm)
             
             VStack {
+                Text(topText).multilineTextAlignment(.center)
+                
                 Spacer()
                 
                 Slider(

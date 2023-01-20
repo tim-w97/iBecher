@@ -14,7 +14,7 @@ class MugCheckerVM : ObservableObject {
     let minTopLidHeight: Float = 4
     let maxTopLidHeight: Float = 20
     let topLidHeightSliderStep: Float = 1
-    let maxCupHeight: Float = 14
+    let maxCupHeight: Float = 12
     
     // height of the Top Lid in cm
     @Published var topLidHeight: Float {
@@ -22,6 +22,8 @@ class MugCheckerVM : ObservableObject {
             changeTopLidHeight()
         }
     }
+    
+    @Published var lidIsOverMaxCupHeight: Bool
     
     let modelInterface: ModelInterface
     let arView: ARView
@@ -31,6 +33,8 @@ class MugCheckerVM : ObservableObject {
         
         topLidHeight = initialTopLidHeight
         arView = modelInterface.getARView()
+        
+        lidIsOverMaxCupHeight = false
     }
     
     func changeTopLidHeight() {
@@ -55,8 +59,10 @@ class MugCheckerVM : ObservableObject {
         topLidText.position.y = (topLidHeight + 1) / 100
         
         if topLidHeight > maxCupHeight {
+            lidIsOverMaxCupHeight = true
             changeColorOf(entity: topLid, to: .red)
         } else {
+            lidIsOverMaxCupHeight = false
             changeColorOf(entity: topLid, to: .green)
         }
     }

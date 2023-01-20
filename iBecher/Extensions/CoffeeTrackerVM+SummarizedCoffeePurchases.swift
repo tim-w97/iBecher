@@ -45,7 +45,7 @@ extension CoffeeTrackerVM {
         // remove duplicates
         let uniqueCalendarComponents: [Int] = Array(Set(calendarComponents))
         
-        // create weekly purchase for every calendar week
+        // create a list of summarized coffee purchases
         var coffeePurchasesList: [CoffeePurchases] = []
         
         for calendarComponentValue in uniqueCalendarComponents {
