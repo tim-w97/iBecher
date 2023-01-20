@@ -7,12 +7,14 @@
 
 import SwiftUI
 
+/// This View allows the user to track their coffee consumption by adding some data about the purchase at the coffee machine
 struct CoffeeTrackerView: View {
     @ObservedObject var vm: CoffeeTrackerVM
     @Binding var tabViewSelection: TabViewSelection
     
     @State var alertIsShown = false
     
+    /// The View consists of a toggle to choose between paper mug and reusable mug, a second toggle to choose the coffe size and a text to show the cost of the purchase
     var body: some View {
         VStack {
             Text("Hast du eine eigene Tasse dabei?")

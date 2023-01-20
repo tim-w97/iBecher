@@ -7,10 +7,12 @@
 
 import SwiftUI
 
+/// Shows a list of summarized coffee purchases
 struct CoffeePurchasesListView: View {
     let purchases: [CoffeePurchases]
     @Binding var tabViewSelection: TabViewSelection
     
+    /// The list shows a info message if the user hasn't tracked anything yet, otherwise it shows a scrollable list of summarized coffee purchases
     var body: some View {
         if purchases.isEmpty {
             VStack {

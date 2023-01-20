@@ -7,9 +7,11 @@
 
 import SwiftUI
 
+/// This is a custom Card view thats wraps it's content and adds a custom style
 struct Card<Content:View>: View {
     @ViewBuilder var content: Content
     
+    /// The content just get's stacked with an rounded rectangle with a border and a light shadow
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)

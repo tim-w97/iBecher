@@ -7,9 +7,11 @@
 
 import SwiftUI
 
+/// This view stacks the ar view with some UI controls
 struct MugCheckerARView: View {
     @ObservedObject var vm: MugCheckerVM
     
+    /// The view consists of the ar view, stacked with a slider to change the top lid height, a text with the current height and a text that shows wether the mug is too tall or not
     var body: some View {
         let topText: String = vm.lidIsOverMaxCupHeight ?
         "Deine Tasse ist zu groß. 😥" :

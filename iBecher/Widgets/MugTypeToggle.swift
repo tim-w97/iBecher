@@ -7,11 +7,13 @@
 
 import SwiftUI
 
+/// The Mug Type Toggle can be toggled if the user brings his own reusable mug
 struct MugTypeToggle: View {
     @ObservedObject var vm: CoffeeTrackerVM
     
     @State var toggleValue = false
     
+    /// The Mug Type Toggle is basically a switch, wrapped with a rounded border and a small description
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)

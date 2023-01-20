@@ -7,9 +7,11 @@
 
 import SwiftUI
 
+/// This view shows the totals of all coffee purchases made by the user
 struct TotalCoffeePurchasesView: View {
     let totalCoffeePurchases: TotalCoffeePurchases
     
+    /// Vertical list of the totals of paper mugs used, coffee drunk  and costs
     var body: some View {
         VStack {
             Text("Benutze Pappbecher: \(totalCoffeePurchases.usedPaperMugs)")

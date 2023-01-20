@@ -7,11 +7,13 @@
 
 import SwiftUI
 
+/// The Content View shows a tab view that encloses all the screens the user can see
 struct ContentView: View {
     @State var tabViewSelection = TabViewSelection.coffeeTracker
     
     let coffeeTrackerVM = CoffeeTrackerVM()
     
+    /// The Tab Views allows the user to switch between Mug Checker, Coffee Tracker and Coffee Consumption
     var body: some View {
         TabView(selection: $tabViewSelection){
             MugCheckerARView(

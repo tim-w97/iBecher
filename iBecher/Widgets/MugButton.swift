@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// The Mug Button is one of two buttons to chose the desired coffee size
 struct MugButton: View {
     let coffeeSize: CoffeeSize
     
@@ -15,6 +16,8 @@ struct MugButton: View {
     
     let action: ()->()
     
+    /// Returns the corresponding image to the selected mug type and coffee size
+    /// - Returns: Asset name of the image to use
     private func getMugImage() -> String {
         if mugType == .paperMug {
             if coffeeSize == .small {
@@ -31,6 +34,7 @@ struct MugButton: View {
         }
     }
     
+    /// The Mug Button consists of a circle, stacked with the corresponding image, and a small description at the bottom
     var body: some View {
         Button(action: action) {
             VStack {

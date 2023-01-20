@@ -9,6 +9,7 @@ import Foundation
 import RealityKit
 import SwiftUI
 
+/// The AR view is based on UIKit, so we need to wrap it with a UIViewRepresentable to use it in SwiftUI views
 struct MugCheckerARViewContainer: UIViewRepresentable {
     let vm: MugCheckerVM
     

@@ -7,11 +7,13 @@
 
 import SwiftUI
 
+/// The Coffee Consumption View shows a list of summarized coffee consumptions, filtered by the time period selected by the picker at the top of the screen
 struct CoffeeConsumptionView: View {
     @ObservedObject var vm: CoffeeTrackerVM
     @State var period = TimePeriod.weekly
     @Binding var tabViewSelection: TabViewSelection
     
+    /// The View consists of a picker to choose the time period, followed by the List of summarized coffee purchases
     var body: some View {
         VStack(spacing: 0) {
             Picker("Zeitraum", selection: $period) {
