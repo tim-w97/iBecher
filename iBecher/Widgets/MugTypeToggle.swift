@@ -29,7 +29,8 @@ struct MugTypeToggle: View {
     }
 }
 
-struct MugTypeSwitch_Previews: PreviewProvider {
+/// Preview for the Mug Type Toggle
+struct MugTypeToggle_Previews: PreviewProvider {
     static var previews: some View {
         MugTypeToggle(vm: CoffeeTrackerVM())
     }

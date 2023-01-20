@@ -9,6 +9,7 @@ import SwiftUI
 
 /// The Content View shows a tab view that encloses all the screens the user can see
 struct ContentView: View {
+    /// The current tab that is active
     @State var tabViewSelection = TabViewSelection.coffeeTracker
     
     let coffeeTrackerVM = CoffeeTrackerVM()
@@ -45,6 +46,7 @@ struct ContentView: View {
     }
 }
 
+/// Preview of the App's Content View
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

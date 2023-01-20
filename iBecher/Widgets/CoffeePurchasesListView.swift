@@ -10,6 +10,7 @@ import SwiftUI
 /// Shows a list of summarized coffee purchases
 struct CoffeePurchasesListView: View {
     let purchases: [CoffeePurchases]
+    /// The tab view selection State gets üassed to jump to the Coffee Tracker if the user hasn't tracked anything yet
     @Binding var tabViewSelection: TabViewSelection
     
     /// The list shows a info message if the user hasn't tracked anything yet, otherwise it shows a scrollable list of summarized coffee purchases
@@ -54,6 +55,7 @@ struct CoffeePurchasesListView: View {
 }
 
 
+/// Preview for the Coffee Purchases List View
 struct CoffeePurchasesListView_Previews: PreviewProvider {
     static var previews: some View {
         CoffeePurchasesListView(purchases: [

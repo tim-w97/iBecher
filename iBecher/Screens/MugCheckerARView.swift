@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-/// This view stacks the ar view with some UI controls
+/// This screen stacks the ar view with some UI controls
 struct MugCheckerARView: View {
     @ObservedObject var vm: MugCheckerVM
     
@@ -37,6 +37,7 @@ struct MugCheckerARView: View {
     }
 }
 
+/// Preview for the Mug Checker AR Screen
 struct MugCheckerARView_Previews: PreviewProvider {
     static var previews: some View {
         MugCheckerARView(vm: MugCheckerVM())

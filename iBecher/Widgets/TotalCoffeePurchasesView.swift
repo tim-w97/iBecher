@@ -22,6 +22,7 @@ struct TotalCoffeePurchasesView: View {
     }
 }
 
+/// Preview of the Total Coffee Purchases View
 struct TotalCoffeePurchases_Previews: PreviewProvider {
     static var previews: some View {
         TotalCoffeePurchasesView(

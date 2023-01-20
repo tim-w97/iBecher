@@ -10,22 +10,28 @@ import RealityKit
 import UIKit
 import ARKit
 
+/// Holds data for the Mug Checker Screen including the ar scene and a slide to change the lid's height
 class MugCheckerVM : ObservableObject {
     let initialTopLidHeight : Float = 12
     let minTopLidHeight: Float = 4
     let maxTopLidHeight: Float = 20
     let topLidHeightSliderStep: Float = 1
+    /// If the cup is taller than 12 cm, it doesn't fit in the Dallmayr Machine
     let maxCupHeight: Float = 12
     
+    /// This Scene includes the Top Lid and the "Höhe" Label
     var topLidScene: TopLid.Scene!
     
-    // height of the Top Lid in cm
+    /// The current height of the Top Lid in cm
+    /// Resets AR Top Lid position and color on change
     @Published var topLidHeight: Float {
         didSet {
             changeTopLidHeight()
         }
     }
     
+    /// Informs the view with a boolean weather the lid is over the max allowed height by the Dallmayr Machines or not
+    /// Determines the color of the lid
     @Published var lidIsOverMaxCupHeight: Bool
     
     let modelInterface: ModelInterface

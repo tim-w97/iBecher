@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-/// This is a custom Card view thats wraps it's content and adds a custom style
+/// This is a custom Card view thats encloses another content and adds a custom style
 struct Card<Content:View>: View {
+    /// The SwiftUI content the Card has to enclose
     @ViewBuilder var content: Content
     
     /// The content just get's stacked with an rounded rectangle with a border and a light shadow
@@ -23,6 +24,7 @@ struct Card<Content:View>: View {
     }
 }
 
+/// Preview for the custom Card view
 struct Card_Previews: PreviewProvider {
     static var previews: some View {
         Card {

@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-/// This View allows the user to track their coffee consumption by adding some data about the purchase at the coffee machine
+/// This screen allows the user to track their coffee consumption by adding some data about the purchase at the coffee machine
 struct CoffeeTrackerView: View {
     @ObservedObject var vm: CoffeeTrackerVM
+    /// The tab view selection state gets passed to switch to the Coffee Consumption View after the user added a coffee purchase
     @Binding var tabViewSelection: TabViewSelection
     
     @State var alertIsShown = false
@@ -70,6 +71,7 @@ struct CoffeeTrackerView: View {
     }
 }
 
+/// Preview for the Coffee Tracker Screen
 struct CoffeeTrackerView_Previews: PreviewProvider {
     static var previews: some View {
         CoffeeTrackerView(

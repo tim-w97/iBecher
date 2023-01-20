@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Holds the current data on the Coffee Tracker Screen and adds it to the database if the user taps the button
 class CoffeeTrackerVM: ObservableObject {
     @Published var coffeePurchases: [CoffeePurchase]
     

@@ -14,6 +14,7 @@ struct MugButton: View {
     @Binding var selectedCoffeeSize: CoffeeSize
     @Binding var mugType: MugType
     
+    /// The action of the Mug Button gets passed from the parent view
     let action: ()->()
     
     /// Returns the corresponding image to the selected mug type and coffee size
@@ -51,6 +52,7 @@ struct MugButton: View {
     }
 }
 
+/// Preview for the Mug Button
 struct MugButton_Previews: PreviewProvider {
     static var previews: some View {
         MugButton(

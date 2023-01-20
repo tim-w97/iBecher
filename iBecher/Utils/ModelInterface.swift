@@ -8,9 +8,11 @@
 import Foundation
 import RealityKit
 
+/// The Model Interface is responsible for getting and adding coffee purchases to the database and the users disk
 class ModelInterface {
     var index: Int
     
+    /// Sets the index to 0 to always load the first coffee purchase
     init() {
         index = 0
     }

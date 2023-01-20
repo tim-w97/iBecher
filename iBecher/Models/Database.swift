@@ -10,6 +10,7 @@ import RealityKit
 
 /// The database which provides the coffee purchases and the ar view from a shared instance / single source of truth
 struct Database {
+    /// The shared instance always points at one single source of truth
     static var sharedInstance = Database()
     
     var coffeePurchases: [CoffeePurchase]
