@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// The machines at our university have two different coffee capacities, small coffee or big coffee (XL)
 enum CoffeeSize: Codable {
     case small
     case big

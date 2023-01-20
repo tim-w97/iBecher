@@ -8,13 +8,14 @@
 import Foundation
 import RealityKit
 
-// we want to make sure that no one creates an object of this class, so we make it final
+/// The database which provides the coffee purchases and the ar view from a shared instance / single source of truth
 struct Database {
     static var sharedInstance = Database()
     
     var coffeePurchases: [CoffeePurchase]
     let arView: ARView
     
+    /// initializes the coffee purchases with an empty list, because the coffee purchases from the disk are loaded asynchronously, and creates a new ar view
     init() {
         coffeePurchases = []
         arView = ARView()

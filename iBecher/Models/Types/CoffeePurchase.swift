@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Stores the purchase date, the coffee size and the mug type (paper mug / reusable mug)
 struct CoffeePurchase: Identifiable, Codable {
     var id = UUID()
     

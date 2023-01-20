@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Provides the prices for a small coffee, a big coffee (XL) and the extra cost for a paper mug
 struct CoffeePrice {
     static let small = 0.70
     static let big = 1.00

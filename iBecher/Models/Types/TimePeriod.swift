@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// The time period for a summary of multiple coffee purchases can be weekly, monthly, yearly or total (summary of all coffee purchases)
 enum TimePeriod {
     case weekly
     case monthly

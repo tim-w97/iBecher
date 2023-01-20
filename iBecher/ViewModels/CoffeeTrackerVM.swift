@@ -20,6 +20,7 @@ class CoffeeTrackerVM: ObservableObject {
     let currencyFormatter: NumberFormatter
     let numberFormatter: NumberFormatter
     
+    /// Initializes all attributes, creates two number formatters for currency and numbers and loads the coffee purchases from the disk
     init() {
         modelInterface = ModelInterface()
         
@@ -47,25 +48,32 @@ class CoffeeTrackerVM: ObservableObject {
         calculateCoffeePrice()
     }
     
+    /// Converts the current cost to a currency string
+    /// - Returns: Formatted currency value
     func getCostAsString() -> String {
         return currencyFormatter.string(from: cost as NSNumber)!
     }
     
+    /// Selects the small coffee size and recalculates the coffee price
     func selectSmallCoffeeSize() {
         selectedCoffeeSize = .small
         calculateCoffeePrice()
     }
     
+    /// Selects the big coffee size and recalculates the coffee price
     func selectBigCoffeeSize() {
         selectedCoffeeSize = .big
         calculateCoffeePrice()
     }
     
+    /// Toggles the mug type from resusableMug to paperMug or vice versa and recalculates the coffee price
+    /// - Parameter toggleValue: The new value of the toggle switch
     func toggleMugType(toggleValue: Bool) {
         selectedMugType = toggleValue ? .reusableMug : .paperMug
         calculateCoffeePrice()
     }
     
+    /// Creates  a new coffee purchase  from the selected values, adds the current date and saves it on the disk
     func addCoffeePurchase() {
         let purchase = CoffeePurchase (
             id: UUID(),
@@ -79,6 +87,8 @@ class CoffeeTrackerVM: ObservableObject {
         refreshCoffeePurchasesList()
     }
     
+    /// Calculates the total values for each coffee purchase
+    /// - Returns: The total coffee purchases
     func getTotalCoffeePurchases() -> TotalCoffeePurchases {
         var usedPaperMugs: Int = 0
         var totalDrankCoffee: Double = 0
@@ -106,6 +116,9 @@ class CoffeeTrackerVM: ObservableObject {
         )
     }
     
+    /// Calculates the price for a given coffee purchase
+    /// - Parameter forPurchase: The purchase to calculate the price of
+    /// - Returns: The  calculated price of the coffee purchase
     func calculateCoffeePrice(forPurchase:CoffeePurchase) -> Double {
         var cost:Double = 0
         
@@ -123,6 +136,7 @@ class CoffeeTrackerVM: ObservableObject {
         return cost
     }
     
+    /// Calculates the price of the selected coffee purchase on the screen
     func calculateCoffeePrice() {
         cost = 0
         
@@ -138,6 +152,7 @@ class CoffeeTrackerVM: ObservableObject {
         }
     }
     
+    /// Reloads all coffee purchases from the database and shows it on the screen
     public func refreshCoffeePurchasesList() {
         coffeePurchases = []
         
@@ -153,6 +168,7 @@ class CoffeeTrackerVM: ObservableObject {
         }
     }
     
+    /// Loads all coffee purchases from the disk and stores it in the database
     func loadDataFromDisk() {
         modelInterface.loadDataFromDisk { result in
             switch result {

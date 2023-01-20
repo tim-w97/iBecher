@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Summary of all coffee purchases in total
 struct TotalCoffeePurchases {
     let usedPaperMugs: Int
     let totalDrankCoffee: String

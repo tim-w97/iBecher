@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Type for the possible tabs the user can select
 enum TabViewSelection {
     case mugChecker
     case coffeeTracker

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Summary of multiple coffee purchases with total values
 struct CoffeePurchases: Identifiable {
     let title: String
     let calendarComponentValue: Int
