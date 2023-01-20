@@ -8,15 +8,16 @@
 import Foundation
 import RealityKit
 import UIKit
+import ARKit
 
 class MugCheckerVM : ObservableObject {
-    private let initialTopLidHeight : Float = 12
+    let initialTopLidHeight : Float = 12
     let minTopLidHeight: Float = 4
     let maxTopLidHeight: Float = 20
     let topLidHeightSliderStep: Float = 1
     let maxCupHeight: Float = 12
     
-    var topLidScene: TopLid.Scene?
+    var topLidScene: TopLid.Scene!
     
     // height of the Top Lid in cm
     @Published var topLidHeight: Float {
@@ -68,27 +69,31 @@ class MugCheckerVM : ObservableObject {
     }
     
     private func initARView() {
+        addCoachingOverlay()
+        
         // Load the Top Lid from the file
         do {
             let scene = try TopLid.loadScene()
             topLidScene = scene
         } catch {
-            print("Something went wrong while loading the Top Lid Scene:")
-            print(error)
-            
-            topLidScene = nil
+            fatalError(error.localizedDescription)
         }
         
         // Place the Top Lid on the ground
-        addTopLidToScene()
+        arView.scene.addAnchor(topLidScene)
     }
     
-    private func addTopLidToScene() {
-        guard let topLidAnchor = topLidScene else {
-            return
-        }
+    private func addCoachingOverlay() {
+        let session = arView.session
+        let config = ARWorldTrackingConfiguration()
+        config.planeDetection = .horizontal
+        session.run(config)
         
-        arView.scene.addAnchor(topLidAnchor)
+        let coachingOverlay = ARCoachingOverlayView()
+        coachingOverlay.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        coachingOverlay.session = session
+        coachingOverlay.goal = .horizontalPlane
+        arView.addSubview(coachingOverlay)
     }
     
     private func changeColorOf(entity: Entity, to: UIColor) {
