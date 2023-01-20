@@ -31,6 +31,7 @@ class MugCheckerVM : ObservableObject {
     let modelInterface: ModelInterface
     let arView: ARView
     
+    /// Initializes all attributes and the ar view
     init() {
         modelInterface = ModelInterface()
         
@@ -42,6 +43,7 @@ class MugCheckerVM : ObservableObject {
         initARView()
     }
     
+    /// Changes the top lid height relative to the sliders value and changes the color to green or red, depending on the max height
     func changeTopLidHeight() {
         if arView.scene.anchors.count == 0 {
             return
@@ -68,6 +70,7 @@ class MugCheckerVM : ObservableObject {
         changeColorOf(entity: topLid, to: lidIsOverMaxCupHeight ? .red : .green)
     }
     
+    /// Loads the Top Lid and adds it to the ar view scene
     private func initARView() {
         addCoachingOverlay()
         
@@ -83,6 +86,7 @@ class MugCheckerVM : ObservableObject {
         arView.scene.addAnchor(topLidScene)
     }
     
+    /// Creates a coaching overlay for a better user experience and adds it to the ar view
     private func addCoachingOverlay() {
         let session = arView.session
         let config = ARWorldTrackingConfiguration()
@@ -96,6 +100,10 @@ class MugCheckerVM : ObservableObject {
         arView.addSubview(coachingOverlay)
     }
     
+    /// Changes the color of an entity to a given color
+    /// - Parameters:
+    ///   - entity: The entity to add the color to
+    ///   - to: The color to add
     private func changeColorOf(entity: Entity, to: UIColor) {
         var material = SimpleMaterial()
         

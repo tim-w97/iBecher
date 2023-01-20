@@ -8,6 +8,8 @@
 import Foundation
 
 extension ModelInterface {
+    /// Getter for the URL to the file with all the stored coffee purchases from the user
+    /// - Returns: URL to the file with the stored coffee purchases
     private func getFileURL() throws -> URL {
         try FileManager.default.url(
             for: .documentDirectory,
@@ -18,6 +20,8 @@ extension ModelInterface {
         .appendingPathComponent("coffeePurchases.data")
     }
     
+    /// Loads all the the stored coffee purchases from the users disk and passes them as a list of coffee purchases through an completion handler
+    /// - Parameter completionHandler: The completion handler to call after the coffee purchases got loaded from the disk
     func loadDataFromDisk(completionHandler: @escaping (Result<[CoffeePurchase], Error>) -> Void) {
         DispatchQueue.global(qos: .background).async {
             do {
@@ -43,6 +47,10 @@ extension ModelInterface {
         }
     }
     
+    /// Saves the given coffee purchases to the disk
+    /// - Parameters:
+    ///   - coffeePurchases: The coffee purchases to save
+    ///   - completionHandler: The completion handler to call after the coffee purchases got saved on the disk
     func saveDataToDisk(coffeePurchases: [CoffeePurchase], completionHandler: @escaping (Result<Int, Error>) -> Void) {
         DispatchQueue.global(qos: .background).async {
             do {

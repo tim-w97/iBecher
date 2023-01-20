@@ -8,6 +8,9 @@
 import Foundation
 
 extension CoffeeTrackerVM {
+    /// Combines all current coffee purchases to a new list of summarized coffee purchases
+    /// - Parameter forPeriod: The time period to limit the coffee purchases to
+    /// - Returns: New list of summarized coffee purchases
     public func getSummarizedCoffeePurchases(forPeriod: TimePeriod) -> [CoffeePurchases] {
         if coffeePurchases.isEmpty {
             return []

@@ -15,10 +15,14 @@ class ModelInterface {
         index = 0
     }
     
+    /// Getter for the current ar view
+    /// - Returns: The ar view from the databases shared instance
     public func getARView() -> ARView {
         return Database.sharedInstance.arView
     }
     
+    /// Adds a new coffee purchase to to the database and saves it on the disk
+    /// - Parameter purchase: The coffee purchase to add
     public func addCoffeePurchase(purchase: CoffeePurchase) {
         Database.sharedInstance.coffeePurchases.append(purchase)
         
@@ -32,6 +36,8 @@ class ModelInterface {
         }
     }
     
+    /// Sets the index to 0 and returns the first coffee purchase from the database
+    /// - Returns: The first coffee purchase from the database
     public func getFirstCoffeePurchase() -> CoffeePurchase? {
         index = 0
         
@@ -42,6 +48,8 @@ class ModelInterface {
         return Database.sharedInstance.coffeePurchases[index]
     }
     
+    /// Increases the index by 1 and returns the corresponding coffee purchase from the database
+    /// - Returns: The next coffee purchase from the database
     public func getNextCoffeePurchase() -> CoffeePurchase? {
         index += 1
         
