@@ -16,6 +16,8 @@ class MugCheckerVM : ObservableObject {
     let topLidHeightSliderStep: Float = 1
     let maxCupHeight: Float = 12
     
+    var topLidScene: TopLid.Scene?
+    
     // height of the Top Lid in cm
     @Published var topLidHeight: Float {
         didSet {
@@ -35,6 +37,8 @@ class MugCheckerVM : ObservableObject {
         arView = modelInterface.getARView()
         
         lidIsOverMaxCupHeight = false
+        
+        initARView()
     }
     
     func changeTopLidHeight() {
@@ -56,15 +60,35 @@ class MugCheckerVM : ObservableObject {
         
         // we need to pass in the new position in meters, so we divide the values by 100
         topLid.position.y = topLidHeight / 100
-        topLidText.position.y = (topLidHeight + 1) / 100
+        topLidText.position.y = topLidHeight / 100
         
-        if topLidHeight > maxCupHeight {
-            lidIsOverMaxCupHeight = true
-            changeColorOf(entity: topLid, to: .red)
-        } else {
-            lidIsOverMaxCupHeight = false
-            changeColorOf(entity: topLid, to: .green)
+        lidIsOverMaxCupHeight = topLidHeight > maxCupHeight
+        
+        changeColorOf(entity: topLid, to: lidIsOverMaxCupHeight ? .red : .green)
+    }
+    
+    private func initARView() {
+        // Load the Top Lid from the file
+        do {
+            let scene = try TopLid.loadScene()
+            topLidScene = scene
+        } catch {
+            print("Something went wrong while loading the Top Lid Scene:")
+            print(error)
+            
+            topLidScene = nil
         }
+        
+        // Place the Top Lid on the ground
+        addTopLidToScene()
+    }
+    
+    private func addTopLidToScene() {
+        guard let topLidAnchor = topLidScene else {
+            return
+        }
+        
+        arView.scene.addAnchor(topLidAnchor)
     }
     
     private func changeColorOf(entity: Entity, to: UIColor) {
