@@ -21,7 +21,10 @@ struct MugCheckerARView: View {
             MugCheckerARViewContainer(vm: vm)
             
             VStack {
-                Text(topText).multilineTextAlignment(.center)
+                Text(topText)
+                    .foregroundColor(vm.lidIsOverMaxCupHeight ? .red : .green)
+                    .bold()
+                    .multilineTextAlignment(.center)
                 
                 Spacer()
                 
@@ -32,6 +35,8 @@ struct MugCheckerARView: View {
                 ) {}
                 
                 Text("Höhe: \(Int(vm.topLidHeight)) cm")
+                    .foregroundColor(.white)
+                    .bold()
             }.padding()
         }
     }

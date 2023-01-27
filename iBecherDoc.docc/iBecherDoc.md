@@ -2,12 +2,14 @@
 
 The time for **iBecher** has come! Or in klingon: chutmey law' mIw vIleghpu'!
 
-## Overview
+![The App Icon](app-icon)
 
-![App Logo](app-icon.png)
+## What's the purpose of this app?
 
 With this app, every student and professor at our university can find out wether their coffee mug fits in the Dallmayr coffee machines or not!
 This App tells you, using Augmented Reality!
+
+![All Screens of the App](all-screens.png)
 
 ## Features of the app:
 
@@ -17,6 +19,9 @@ This App tells you, using Augmented Reality!
     * drunk coffee in liters
     * costs
 * Filtering of the tracked data by week, month, year and total
+* Support for Light Mode and Dark Mode
+
+![Light Mode and Dark Mode](light-and-dark.png)
 
 ## Topics
 
